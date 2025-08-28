@@ -4500,8 +4500,10 @@ header.main-header .header-sticky.active .container-fluid::before{
 
 	.responsive-menu,
     .navbar-toggle{
-        display: block;
-    }
+		display: block !important;
+		visibility: visible !important;
+		opacity: 1 !important;    
+	}
 
 	.header-btn{
 		display: none;
