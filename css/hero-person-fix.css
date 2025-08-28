@@ -1,0 +1,101 @@
+/* Additional styles for hero person cards mod--2 through mod--9 */
+
+/* Hero person text more styles for all mod classes */
+.hero__person-txt-more.mod--2 {
+    padding-left: 100px;
+}
+
+.hero__person-txt-more.mod--3 {
+    padding-left: 100px;
+}
+
+.hero__person-txt-more.mod--4 {
+    padding-left: 100px;
+}
+
+.hero__person-txt-more.mod--5 {
+    padding-left: 100px;
+}
+
+.hero__person-txt-more.mod--6 {
+    padding-left: 100px;
+}
+
+.hero__person-txt-more.mod--7 {
+    padding-left: 100px;
+}
+
+.hero__person-txt-more.mod--8 {
+    padding-left: 100px;
+}
+
+.hero__person-txt-more.mod--9 {
+    padding-left: 100px;
+}
+
+/* Hero person text less styles for all mod classes */
+.hero__person-txt-less.mod--2 {
+    right: 0;
+    padding-top: 20px;
+}
+
+.hero__person-txt-less.mod--3 {
+    right: 0;
+    padding-top: 20px;
+}
+
+.hero__person-txt-less.mod--4 {
+    right: 0;
+    padding-top: 20px;
+}
+
+.hero__person-txt-less.mod--5 {
+    right: 0;
+    padding-top: 20px;
+}
+
+.hero__person-txt-less.mod--6 {
+    right: 0;
+    padding-top: 20px;
+}
+
+.hero__person-txt-less.mod--7 {
+    right: 0;
+    padding-top: 20px;
+}
+
+.hero__person-txt-less.mod--8 {
+    right: 0;
+    padding-top: 20px;
+}
+
+.hero__person-txt-less.mod--9 {
+    right: 0;
+    padding-top: 20px;
+}
+
+/* Hide states for all mod classes */
+.hero__person-txt-less.mod--2.hide,
+.hero__person-txt-less.mod--3.hide,
+.hero__person-txt-less.mod--4.hide,
+.hero__person-txt-less.mod--5.hide,
+.hero__person-txt-less.mod--6.hide,
+.hero__person-txt-less.mod--7.hide,
+.hero__person-txt-less.mod--8.hide,
+.hero__person-txt-less.mod--9.hide {
+    display: none;
+}
+
+/* Mobile responsive styles for additional mod classes */
+@media screen and (max-width: 991px) {
+    .hero__person-txt-more.mod--2,
+    .hero__person-txt-more.mod--3,
+    .hero__person-txt-more.mod--4,
+    .hero__person-txt-more.mod--5,
+    .hero__person-txt-more.mod--6,
+    .hero__person-txt-more.mod--7,
+    .hero__person-txt-more.mod--8,
+    .hero__person-txt-more.mod--9 {
+        padding-left: 16px;
+    }
+}

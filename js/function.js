@@ -133,13 +133,13 @@
       });
       tl.from(container, 1, {
         xPercent: -100,
-        ease: Power2.out,
+        ease: "power2.out",
       });
       tl.from(image, 1, {
         xPercent: 100,
         scale: 1,
         delay: -1,
-        ease: Power2.out,
+        ease: "power2.out",
       });
     });
   }
@@ -270,4 +270,68 @@
       fixedContentPos: true,
     });
   }
+
+function initLogoMarquee(selector, speedMs = 4000, perView = 5.5) {
+  return new Swiper(selector, {
+    slidesPerView: perView,
+    spaceBetween: 32,
+    loop: true,
+    speed: speedMs,
+    autoplay: {
+      delay: 0,                   // continuous movement
+      disableOnInteraction: false,// don’t stop autoplay on interaction
+      pauseOnMouseEnter: false     // pause only when hovering
+    },
+
+    allowTouchMove: false,        // ⬅️ disables drag/swipe (fixes click issue)
+    breakpoints: {
+      320:  { slidesPerView: 2, spaceBetween: 20 },
+      768:  { slidesPerView: 3, spaceBetween: 30 },
+      1024: { slidesPerView: 5, spaceBetween: 40 }
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  initLogoMarquee('.client-slider--psu', 4200, 5.5);
+  initLogoMarquee('.client-slider--private', 4000, 5.5);
+  initLogoMarquee('.client-slider--global', 3800, 5.5);
+
+  var currentPage = location.pathname.split("/").pop().toLowerCase();
+
+// List of industry pages
+var industryPages = [
+  "agriculture.html",
+  "datacenter.html",
+  "electricalpower.html",
+  "marine.html",
+  "mining.html",
+  "processindustry.html",
+  "renewable.html",
+  "smeindusrty.html",
+  "waterscada.html"
+];
+
+document.querySelectorAll('.main-menu ul li a').forEach(function(link) {
+  var href = link.getAttribute('href');
+  if (href) {
+    var page = href.toLowerCase();
+
+    // Highlight the exact match
+    if (page === currentPage) {
+      link.classList.add('active');
+    }
+
+    // If current page belongs to industry pages → highlight main "Industry" menu
+    if (industryPages.includes(currentPage) && link.classList.contains('industry-menu')) {
+      link.classList.add('active');
+    }
+  }
+});
+
+});
+
+
+
+
 })(jQuery);
