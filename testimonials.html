@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="ADVINONEX">
+	<!-- Page Title -->
+    <title>Customer Testimonials | ADVINONEX</title>
+	<!-- Favicon Icon -->
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+	<!-- Google Fonts Css-->
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+	<!-- Bootstrap Css -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<!-- SlickNav Css -->
+	<link href="css/slicknav.min.css" rel="stylesheet">
+	<!-- Swiper Css -->
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<!-- Font Awesome Icon Css-->
+	<link href="css/all.css" rel="stylesheet" media="screen">
+	<!-- Animated Css -->
+	<link href="css/animate.css" rel="stylesheet">
+    <!-- Magnific Popup Core Css File -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Mouse Cursor Css File -->
+	<link rel="stylesheet" href="css/mousecursor.css">
+	<!-- Main Custom Css -->
+	<link href="css/custom.css" rel="stylesheet" media="screen">
+
+    <script type="text/javascript">
+        fetch('header.html').then(r => r.text()).then(html => document.getElementById('header').innerHTML = html);
+        fetch('footer.html').then(r => r.text()).then(html => document.getElementById('footer').innerHTML = html);
+    </script>
+
+</head>
+<body>
+
+    <!-- Preloader Start -->
+	<div class="preloader">
+		<div class="loading-container">
+			<div class="loading"></div>
+			<div id="loading-icon">
+                <img src="images/avn.webp" alt="" style="
+                    margin: 3rem 0px 3rem;
+                    background-color: #ffffffc2;
+                    border-radius: 5px;
+                    max-height: 15rem;
+                    pointer-events: none;
+                    user-select: none;
+                    grid-column: 1;
+                    grid-row: 1;
+                    align-self: center;
+                    justify-self: center;
+                    text-align: center;
+                    color: gray;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                ">
+                </div>
+		</div>
+	</div>
+	<!-- Preloader End -->
+
+    <!-- Header Start -->
+    <div id="header"></div>   
+	<!-- Header End -->
+
+    <!-- Page Header Start -->
+	<div class="page-header bg-section parallaxie testimonial-page-header">
+        <!-- Page Header Box Start -->
+        <div class="page-header-box">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- Page Header Content Start -->
+                        <div class="page-header-content">
+                            <h1 class="wow fadeInUp" style="font-weight: 500;">Customer Visits & Testimonials</h1>
+                            <nav class="wow fadeInUp" data-wow-delay="0.25s">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Customer Visits & Testimonials</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <!-- Page Header Content End -->
+                    </div>
+                </div>
+            </div>
+        </div>	
+        <!-- Page Header Box End -->	
+	</div>
+	<!-- Page Header End -->
+
+    <!-- Page Services Start -->
+    <div class="page-services">
+        <div class="container">
+            <div class="row">
+
+                <!-- Customer Visits Section -->
+                <section class="section visits-section">
+                    <div class="container">
+
+                        <div class="visits-grid">
+                            <!-- Visit Card 1 -->
+                            <div class="visit-card" onclick="openGallery('gallery1')">
+                                <div class="card-background" style="background-image: url('images/testimonials/Indorama/1.webp')"></div>
+                                <div class="card-overlay">
+                                    <div>
+                                        <div class="client-logo">I</div>
+                                    </div>
+                                    <div class="card-content">
+                                        <h3 class="client-name">Indorama</h3>
+                                        <p class="visit-description">Indorama Visit</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <span class="visit-date">August 2025</span>
+                                    </div>
+                                </div>
+                                <div class="photo-counter">6 Photos</div>
+                            </div>
+
+                            <!-- Visit Card 2 -->
+                            <div class="visit-card" onclick="openGallery('gallery2')">
+                                <div class="card-background" style="background-image: url('images/testimonials/ZIV/1.webp')"></div>
+                                <div class="card-overlay">
+                                    <div>
+                                        <div class="client-logo">ZIV</div>
+                                    </div>
+                                    <div class="card-content">
+                                        <h3 class="client-name">ZIV</h3>
+                                        <p class="visit-description">ZIV AVR relay integrated testing</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <span class="visit-date">August 2025</span>
+                                    </div>
+                                </div>
+                                <div class="photo-counter">3 Photos</div>
+                            </div>
+
+                            <!-- Visit Card 3 -->
+                            <div class="visit-card" onclick="openGallery('gallery3')">
+                                <div class="card-background" style="background-image: url('images/testimonials/Elecrama/1.webp')"></div>
+                                <div class="card-overlay">
+                                    <div>
+                                        <div class="client-logo">E</div>
+                                    </div>
+                                    <div class="card-content">
+                                        <h3 class="client-name">ELECRAMA EXHIBITION</h3>
+                                        <p class="visit-description">Our Elecrama Exhibition Visit</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <span class="visit-date">February 2025</span>
+                                    </div>
+                                </div>
+                                <div class="photo-counter">21 Photos</div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Gallery Modals -->
+                <div id="gallery1" class="gallery-modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title">Indorama</h3>
+                            <button class="close-btn" onclick="closeGallery('gallery1')">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="gallery-grid">
+                                <div class="gallery-item">
+                                    <img src="images/testimonials/Indorama/1.webp" alt="Indorama Project Image 1">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/testimonials/Indorama/2.webp" alt="Indorama Project Image 2">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/testimonials/Indorama/3.webp" alt="Indorama Project Image 3">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/testimonials/Indorama/4.webp" alt="Indorama Project Image 4">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/testimonials/Indorama/5.webp" alt="Indorama Project Image 5">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/testimonials/Indorama/6.webp" alt="Indorama Project Image 6">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/testimonials/Indorama/7.webp" alt="Indorama Project Image 7">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/testimonials/Indorama/8.webp" alt="Indorama Project Image 8">
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="gallery2" class="gallery-modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title">ZIV AVR relay integrated testing</h3>
+                            <button class="close-btn" onclick="closeGallery('gallery2')">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="gallery-grid">
+                                <div class="gallery-item">
+                                    <img src="images/testimonials/ZIV/1.webp" alt="ZIV Project Image 1">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/testimonials/ZIV/2.webp" alt="ZIV Project Image 2">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/testimonials/ZIV/3.webp" alt="ZIV Project Image 3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="gallery3" class="gallery-modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title">Elecrama Exhibition</h3>
+                            <button class="close-btn" onclick="closeGallery('gallery3')">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="gallery-grid">
+                                <div class="gallery-item">
+                                    <img src="images/testimonials/Elecrama/1.webp" alt="Elecrama Exhibition Image 1">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/testimonials/Elecrama/2.webp" alt="Elecrama Exhibition Image 2">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/testimonials/Elecrama/3.webp" alt="Elecrama Exhibition Image 3">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/testimonials/Elecrama/4.webp" alt="Elecrama Exhibition Image 4">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/testimonials/Elecrama/5.webp" alt="Elecrama Exhibition Image 5">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/testimonials/Elecrama/6.webp" alt="Elecrama Exhibition Image 6">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/testimonials/Elecrama/7.webp" alt="Elecrama Exhibition Image 7">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/testimonials/Elecrama/8.webp" alt="Elecrama Exhibition Image 8">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/testimonials/Elecrama/9.webp" alt="Elecrama Exhibition Image 9">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/testimonials/Elecrama/10.webp" alt="Elecrama Exhibition Image 10">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/testimonials/Elecrama/11.webp" alt="Elecrama Exhibition Image 11">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/testimonials/Elecrama/12.webp" alt="Elecrama Exhibition Image 12">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/testimonials/Elecrama/13.webp" alt="Elecrama Exhibition Image 13">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/testimonials/Elecrama/14.webp" alt="Elecrama Exhibition Image 14">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/testimonials/Elecrama/15.webp" alt="Elecrama Exhibition Image 15">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/testimonials/Elecrama/16.webp" alt="Elecrama Exhibition Image 16">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/testimonials/Elecrama/17.webp" alt="Elecrama Exhibition Image 17">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/testimonials/Elecrama/18.webp" alt="Elecrama Exhibition Image 18">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/testimonials/Elecrama/19.webp" alt="Elecrama Exhibition Image 19">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/testimonials/Elecrama/20.webp" alt="Elecrama Exhibition Image 20">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/testimonials/Elecrama/21.webp" alt="Elecrama Exhibition Image 21">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Page Services End -->
+
+    <!-- Footer Start -->
+    <div id="footer"></div>   
+    <!-- Footer End -->
+    <script>
+        // Gallery modal functions
+        function openGallery(galleryId) {
+            const modal = document.getElementById(galleryId);
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeGallery(galleryId) {
+            const modal = document.getElementById(galleryId);
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside content
+        document.querySelectorAll('.gallery-modal').forEach(modal => {
+            modal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeGallery(this.id);
+                }
+            });
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.gallery-modal.active').forEach(modal => {
+                    closeGallery(modal.id);
+                });
+            }
+        });
+
+        // Add hover effects for cards
+        document.querySelectorAll('.visit-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+    <!-- Jquery Library File -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap js file -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Validator js file -->
+    <script src="js/validator.min.js"></script>
+    <!-- SlickNav js file -->
+    <script src="js/jquery.slicknav.js"></script>
+    <!-- Swiper js file -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- Counter js file -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <!-- Magnific js file -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- SmoothScroll -->
+    <script src="js/SmoothScroll.js"></script>
+    <!-- Parallax js -->
+    <script src="js/parallaxie.js"></script>
+    <!-- MagicCursor js file -->
+    <script src="js/gsap.min.js"></script>
+    <script src="js/magiccursor.js"></script>
+    <!-- Text Effect js file -->
+    <script src="js/SplitText.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <!-- YTPlayer js File -->
+
+    <!-- Wow js file -->
+    <script src="js/wow.js"></script>
+    <!-- Main Custom js file -->
+    <script src="js/function.js"></script>
+	
+</body>
+
+</html>

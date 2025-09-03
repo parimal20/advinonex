@@ -6251,6 +6251,321 @@ header.main-header .header-sticky.active .container-fluid::before{
     -webkit-text-fill-color: unset !important;
 }
 
+.testimonial-page-header{
+	background: url('../images/testimonials.webp') no-repeat !important;
+	background-size: cover !important;
+    background-repeat: no-repeat !important;
+    /* background-position: center -54px !important; */
+}
+
+/* /testimonial page */
+
+        /* Visit Cards Grid */
+        .visits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .visit-card {
+            position: relative;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            cursor: pointer;
+            transition: all 0.4s ease;
+            height: 320px;
+        }
+
+        .visit-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+        }
+
+        .card-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: blur(1px);
+            transition: all 0.4s ease;
+        }
+
+        .visit-card:hover .card-background {
+            transform: scale(1.05);
+            filter: blur(0.5px);
+        }
+
+        .card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(30, 60, 114, 0.8), rgba(42, 82, 152, 0.6));
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 30px;
+            color: white;
+        }
+
+        .client-logo {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 15px;
+        }
+
+        .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .client-name {
+			color: #ecf0f1 !important;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .visit-description {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            opacity: 0.95;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+            margin-bottom: 20px;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .visit-date {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .expand-hint {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Expanded Gallery Modal */
+        .gallery-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: none;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-modal.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-title {
+			color: #fff;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background 0.3s ease;
+        }
+
+        .close-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .modal-body {
+            flex-grow: 1;
+            padding: 30px;
+            overflow-y: auto;
+        }
+
+/* Masonry layout using columns */
+.gallery-grid {
+  column-count: 3;
+  column-gap: 25px;
+  width: 100%;
+  padding: 0;
+}
+
+.gallery-item {
+  display: block;
+  break-inside: avoid;
+  margin-bottom: 25px;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #2c3e50;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  aspect-ratio: auto; /* Remove fixed aspect ratio for natural image flow */
+}
+
+.gallery-item img,
+.gallery-placeholder {
+  width: 100%;
+  display: block;
+}
+
+/* Responsive columns */
+@media (max-width: 991px) {
+  .gallery-grid {
+    column-count: 2;
+  }
+}
+@media (max-width: 600px) {
+  .gallery-grid {
+    column-count: 1;
+  }
+}
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+
+        .gallery-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #34495e, #2c3e50);
+            color: #ecf0f1;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.1rem;
+        }
+
+        .gallery-placeholder small {
+            opacity: 0.7;
+            margin-top: 8px;
+            font-size: 0.9rem;
+        }
+
+        /* Photo Counter */
+        .photo-counter {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            
+            .visits-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .visit-card {
+                height: 280px;
+            }
+            
+            .card-overlay {
+                padding: 25px;
+            }
+            
+            .client-name {
+				color: #ecf0f1 !important;
+                font-size: 1.4rem;
+            }
+            
+            .visit-description {
+                font-size: 1rem;
+            }
+            
+            .modal-body {
+                padding: 20px;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .visits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .visit-card {
+                height: 260px;
+            }
+            
+            .card-overlay {
+                padding: 20px;
+            }
+        }
 
 /* Intro overlay covers screen (above hero) */
 /* .intro-overlay{
