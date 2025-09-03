@@ -6257,7 +6257,9 @@ header.main-header .header-sticky.active .container-fluid::before{
     background-repeat: no-repeat !important;
     /* background-position: center -54px !important; */
 }
-
+.testimonial-section{
+	padding: 50px 0 70px;
+}
 /* /testimonial page */
 
         /* Visit Cards Grid */
