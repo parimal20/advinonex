@@ -10,15 +10,15 @@
         --boka-section-padding-desktop: 1.25in;
         --boka-section-padding-tablet: 80px;
         --boka-section-padding-mobile: 48pt;
-        --boka-gradient-1: linear-gradient(rgba(166, 49, 220, 0.75), rgba(67, 0, 177, 0.5)), url("../images/banner/renewable energy.jpg");
-        --boka-gradient-2: linear-gradient(rgba(255, 195, 40, 0.75), rgba(226, 0, 0, 0.5)), url(../images/banner/electrical.jpg);
-        --boka-gradient-3: linear-gradient(rgba(208, 0, 75, 0.75), rgba(136, 6, 157, 0.5)), url(../images/banner/water.jpg);
-        --boka-gradient-4: linear-gradient(rgba(55, 147, 255, 0.75), rgba(0, 23, 228, 0.5)), url(../images/banner/industry.jpg);
-        --boka-gradient-5: linear-gradient(rgba(255, 212, 57, 0.75), rgba(255, 122, 0, 0.5)), url(../images/banner/marine.jpg);
-        --boka-gradient-6: linear-gradient(rgba(0, 185, 96, 0.75), rgba(0, 85, 44, 0.5)), url(../images/banner/datacenter.jpg);
-        --boka-gradient-7: linear-gradient(rgba(255, 145, 0, 0.75), rgba(0, 96, 100, 0.5)), url(../images/banner/sme.jpg);
-        --boka-gradient-8: linear-gradient(rgba(245, 0, 87, 0.75), rgba(46, 125, 50, 0.5)), url(../images/banner/mining.jpg);
-        --boka-gradient-9: linear-gradient(rgba(255, 235, 59, 0.75), rgba(78, 52, 46, 0.5)), url(../images/banner/agriculture.jpg);
+        --boka-gradient-1: linear-gradient(rgba(166, 49, 220, 0.75), rgba(67, 0, 177, 0.5)), url("../images/banner/renewable energy.webp");
+        --boka-gradient-2: linear-gradient(rgba(255, 195, 40, 0.75), rgba(226, 0, 0, 0.5)), url(../images/banner/electrical.webp);
+        --boka-gradient-3: linear-gradient(rgba(208, 0, 75, 0.75), rgba(136, 6, 157, 0.5)), url(../images/banner/water.webp);
+        --boka-gradient-4: linear-gradient(rgba(55, 147, 255, 0.75), rgba(0, 23, 228, 0.5)), url(../images/banner/industry.webp);
+        --boka-gradient-5: linear-gradient(rgba(255, 212, 57, 0.75), rgba(255, 122, 0, 0.5)), url(../images/banner/marine.webp);
+        --boka-gradient-6: linear-gradient(rgba(0, 185, 96, 0.75), rgba(0, 85, 44, 0.5)), url(../images/banner/datacenter.webp);
+        --boka-gradient-7: linear-gradient(rgba(255, 145, 0, 0.75), rgba(0, 96, 100, 0.5)), url(../images/banner/sme.webp);
+        --boka-gradient-8: linear-gradient(rgba(245, 0, 87, 0.75), rgba(46, 125, 50, 0.5)), url(../images/banner/mining.webp);
+        --boka-gradient-9: linear-gradient(rgba(255, 235, 59, 0.75), rgba(78, 52, 46, 0.5)), url(../images/banner/agriculture.webp);
         --boka-body-bg: var(--boka-white);
         --boka-body-color: var(--boka-black)
         }

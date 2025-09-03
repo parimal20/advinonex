@@ -54,7 +54,11 @@
 	--divider-color			: #DFE1DE;
 	--dark-divider-color	: #FFFFFF33;
 	--error-color			: rgb(230, 87, 87);
-	--default-font			: "Fustat", sans-serif;
+	--default-font: "Inter", ui-sans-serif, system-ui, -apple-system,
+                BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+                Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+                "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
 }
 
 /************************************/
@@ -962,7 +966,7 @@ header.main-header .header-sticky.active .container-fluid::before{
 /************************************/
 
 .about-page-header {
-	background: url('../images/about-bg.jpg') no-repeat !important;
+	background: url('../images/about-bg.webp') no-repeat !important;
 	background-size: cover !important;
     background-repeat: no-repeat !important;
     background-attachment: fixed;
@@ -1220,12 +1224,12 @@ header.main-header .header-sticky.active .container-fluid::before{
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fff;             /* white background */
+  /* background: #fff;          */
   border-radius: 12px;          /* rounded corners */
   padding: 15px;                /* spacing inside box */
   height: 120px;                /* fix height */
   width: 220px !important;      /* fix width */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08); /* subtle shadow */
+  /* box-shadow: 0 2px 6px rgba(0,0,0,0.08);  */
   transition: transform 0.3s ease;
 }
 
@@ -1239,16 +1243,31 @@ header.main-header .header-sticky.active .container-fluid::before{
   object-fit: contain;
 }
 
+.client-category-title{
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 1px 4px 0px 1px rgba(0, 0, 0, 0.08);
+    padding: 5px 35px;
+}
+
+.clientele-sliders{
+	text-align: center;
+}
+
+.clientele-sliders h4{
+	display: inline-block;
+}
+
 
 /************************************/
 /***      06. Our Services Css     ***/
 /************************************/
 
 .service-page-header{
-	background: url('../images/industrybg.jpg') no-repeat !important;
+	background: url('../images/industrybg.webp') no-repeat !important;
 	background-size: cover !important;
     background-repeat: no-repeat !important;
-    background-position: center -54px !important;
+    /* background-position: center -54px !important; */
 }
 
 .our-service{
@@ -2071,7 +2090,7 @@ header.main-header .header-sticky.active .container-fluid::before{
 /************************************/
 
 .our-testimonial{
-	background: url('../images/testimonial-bg.png'), var(--primary-color);
+	background: url('../images/testimonial-bg.webp'), var(--primary-color);
 	background-repeat: no-repeat;
 	background-position: top left;
 	background-size: auto;
@@ -2364,7 +2383,7 @@ header.main-header .header-sticky.active .container-fluid::before{
 
 .main-footer{
 	position: relative;
-	background: url(../images/footer-bg-1.png), var(--primary-color);
+	background: url(../images/footer-bg-1.webp), var(--primary-color);
     background-repeat: no-repeat;
     background-position: top right;
     background-size: auto;
@@ -2377,7 +2396,7 @@ header.main-header .header-sticky.active .container-fluid::before{
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	background: url(../images/footer-bg-2.png);
+	background: url(../images/footer-bg-1.webp);
     background-repeat: no-repeat;
     background-position: bottom left;
     background-size: auto;
@@ -2413,7 +2432,7 @@ header.main-header .header-sticky.active .container-fluid::before{
 }
 .footer-contact-info a{
 	color: var(--white-color);
-	text-decoration: underline;
+	/* text-decoration: underline; */
 }
 
 .footer-contact-info p span{
@@ -2523,10 +2542,13 @@ header.main-header .header-sticky.active .container-fluid::before{
 
 .contact-row .details a {
   display: block;
-  text-decoration: underline;
+  /* text-decoration: underline; */
   color: white;
 }
 
+.main-footer .section-title h2 {
+	font-size: 2rem;
+}
 
 /************************************/
 /***     17. About Us Page css    ***/
@@ -2753,7 +2775,7 @@ header.main-header .header-sticky.active .container-fluid::before{
 
 .company-experience{
 	background-color: var(--primary-color);
-	background-image: url('../images/company-experience-bg.png');
+	background-image: url('../images/company-experience-bg.webp');
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -3056,6 +3078,11 @@ header.main-header .header-sticky.active .container-fluid::before{
     height: calc(100% - 30px);
     margin-bottom: 30px;
     padding: 40px;
+
+	display: flex;
+    flex-direction: column;
+	align-items: center;
+    text-align: center;
 }
 
 .page-services .service-item .service-item-content{
@@ -4171,7 +4198,7 @@ header.main-header .header-sticky.active .container-fluid::before{
 /***    29. Contact Us Page css   ***/
 /************************************/
 .contact-page-header{
-	background: url('../images/contact-bg.jpg') no-repeat;
+	background: url('../images/contact-bg.webp') no-repeat;
 }
 
 .page-contact-us{
@@ -4256,6 +4283,7 @@ header.main-header .header-sticky.active .container-fluid::before{
     align-items: center;
 }
 
+.footer-contact-info .icon-box,
 .contact-info-body .icon-box{
     background-image: linear-gradient(to right, var(--dark-color) 0%, var(--accent-color) 50%, var(--dark-color) 100%);
     background-size: 200% auto;
@@ -4477,6 +4505,9 @@ header.main-header .header-sticky.active .container-fluid::before{
 	.page-header-box{
 		padding: 0;
 	}
+	.navbar-brand img {
+        width: 13vw; /* Larger relative size for tablets and mobile */
+    }
 }
 
 @media only screen and (max-width: 991px){
@@ -4590,13 +4621,13 @@ header.main-header .header-sticky.active .container-fluid::before{
 		margin-bottom: 30px;
 	}
 
-	.about-us-img-2{
+	/* .about-us-img-2{
 		right: 0;
-	}
+	} */
 
-	.about-us-img-2 img{
+	/* .about-us-img-2 img{
 		aspect-ratio: 1 / 0.99;
-	}
+	} */
 
 	.about-experience-box{
 		padding: 15px;
@@ -5448,6 +5479,10 @@ header.main-header .header-sticky.active .container-fluid::before{
 	.error-page-content-body p{
 		margin-bottom: 20px;
 	}
+
+	.navbar-brand img {
+        width: 20vw; /* Larger relative size for tablets and mobile */
+    }
 }
 
 @media only screen and (max-width: 767px){
@@ -5533,9 +5568,9 @@ header.main-header .header-sticky.active .container-fluid::before{
         padding: 0 20px 34px 30px;
     }
 
-	.about-us-img-2{
+	/* .about-us-img-2{
         max-width: 145px;
-    }
+    } */
 
 	.about-experience-box{
 		padding: 10px;
@@ -5588,13 +5623,13 @@ header.main-header .header-sticky.active .container-fluid::before{
 	}
 
 	.service-item .icon-box{
-		height: 60px;
-		width: 60px;
+		height:  120px;
+		width: 120px;
 	}
 
-	.service-item .icon-box img{
+	/* .service-item .icon-box img{
 		max-width: 25px;
-	}
+	} */
 
 	.service-item-content h3{
         font-size: 18px;
@@ -5854,7 +5889,7 @@ header.main-header .header-sticky.active .container-fluid::before{
 
 	.footer-copyright{
         padding: 15px 0;
-        margin-top: 30px;
+        margin-top: 20px;
     }
 
 	.footer-menu{
@@ -6113,15 +6148,87 @@ header.main-header .header-sticky.active .container-fluid::before{
     }
 
     .navbar-brand img {
-        width: 18vw; /* Larger relative size for tablets and mobile */
+        width: 22vw; /* Larger relative size for tablets and mobile */
     }
 
+	.our-service .service-item{
+		display: flex; 
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.our-blog .row > div:nth-child(2) {
+		text-align: center;
+		align-items: center;
+	}
+
+	.blog-item .blog-featured-image img{
+		width: 25%;
+	}
+
+	.page-services .service-item,
+	.mission-vision-list .mission-vision-item,
+	.our-team .team-member
+	{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.team-photo{
+		width: 30%;
+	}
+
+	.team-photo img{
+		width: 100% !important;
+	}
 }
 
 @media (max-width: 480px) {
     .navbar-brand img {
-        width: 25vw; /* Even larger for small mobile screens */
+        width: 28vw; /* Even larger for small mobile screens */
     }
+
+	.our-blog .row > div:nth-child(2) {
+		text-align: center;
+		align-items: center;
+	}
+
+	.blog-item .blog-featured-image img{
+		width: 50%;
+	}
+
+	.page-services .service-item,
+	.mission-vision-list .mission-vision-item,
+	.our-team .team-member
+	{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.about-us-img-2{
+        max-width: 145px;
+    }
+		.about-us-img-2{
+		right: 0;
+	}
+
+	.about-us-img-2 img{
+		aspect-ratio: 1 / 0.99;
+	}
+
+	.team-photo{
+		width: 30%;
+	}
+
+	.team-photo img{
+		width: 100% !important;
+	}
+
 }
 
 @media screen and (max-width: 1199.98px){
@@ -6133,3 +6240,59 @@ header.main-header .header-sticky.active .container-fluid::before{
 	background: var(--primary-color);
 }
 } 
+
+.agriculturalindustry h1, .datacenterindustry h1, .electricalindustry h1, .marineindustry h1, .miningindustry h1, .processindustry h1, .renewableindustry h1, .smeindustry h1, .waterindustry h1{
+	font-weight: 700;
+}
+.agriculturalindustry span, .datacenterindustry span, .electricalindustry span, .marineindustry span, .miningindustry span, .processindustry span, .renewableindustry span, .smeindustry span, .waterindustry span{
+    background-image: revert !important;
+    background-clip: revert !important;
+    color: #ffffff;
+    -webkit-text-fill-color: unset !important;
+}
+
+
+/* Intro overlay covers screen (above hero) */
+/* .intro-overlay{
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: #000000 !important;            
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9998;               
+  pointer-events: none;
+} */
+
+/* Headline animation (fade + slide up) */
+/* .intro-text{
+	color: white;
+	opacity: 0;
+	font-size: 5rem;
+	animation: fadeIn 2s ease forwards;
+} */
+
+/* Hero section stays hidden until intro finishes */
+/* .customherosection {
+  transform: scale(0,0);
+  animation: heroReveal 100000s ease-in forwards 2s;
+} */
+
+/* keyframes */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(50%);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(-50%);
+	}
+}
+@keyframes heroReveal {
+  0%   { transform: scale(0, 0.005); }
+  50%  { transform: scaleY(0.005); }
+  100% { transform: scale(1, 1); }
+}
