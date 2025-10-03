@@ -85,8 +85,6 @@
             }
         });
 
-        fetch('header.html').then(r => r.text()).then(html => document.getElementById('header').innerHTML = html);
-        fetch('footer.html').then(r => r.text()).then(html => document.getElementById('footer').innerHTML = html);
     </script>
     <style>
         .swiper-wrapper {
@@ -234,7 +232,7 @@
                 </div>
 
                 <!-- Water SCADA -->
-                <div class="navbar-block navbar-v1-block bg-gradient-3 z-index-8" data-target="water-section" data-href="water.html" id="nav-waterscada">
+                <div class="navbar-block navbar-v1-block bg-gradient-3 z-index-8" data-target="water-section" data-href="waterscada.html" id="nav-waterscada">
                     <h2 class="d-flex transition">
                     Water SCADA
                     <span class="arrow outline"><i class="fa-solid fa-arrow-right"></i></span>
@@ -265,7 +263,7 @@
                 </div>
 
                 <!-- Process Industry -->
-                <div class="navbar-block navbar-v1-block bg-gradient-4 z-index-7" data-target="process-section" data-href="process.html" id="nav-processindustry">
+                <div class="navbar-block navbar-v1-block bg-gradient-4 z-index-7" data-target="process-section" data-href="processindustry.html" id="nav-processindustry">
                     <h2 class="d-flex transition">
                     Process Industry
                     <span class="arrow outline"><i class="fa-solid fa-arrow-right"></i></span>
@@ -1211,6 +1209,14 @@
         });
     </script>
 
+<script>
+    $(document).ready(function () {
+    $('#menu').slicknav({
+        prependTo: '.responsive-menu',
+        label: '' // Optional: Set to empty string if you don't want a label
+    });
+});
+</script>
 </body>
 
 </html>

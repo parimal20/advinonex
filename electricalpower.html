@@ -21,10 +21,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   
     <link href="css/custom.css" rel="stylesheet">
-	<script type="text/javascript">
-		fetch('header.html').then(r => r.text()).then(html => document.getElementById('header').innerHTML = html);
-		fetch('footer.html').then(r => r.text()).then(html => document.getElementById('footer').innerHTML = html);
-	</script>
+
 </head>
 
 <body>
@@ -200,5 +197,13 @@
 
 	<script src="js/wow.js"></script>
 	<script src="js/function.js"></script>
+<script>
+    $(document).ready(function () {
+    $('#menu').slicknav({
+        prependTo: '.responsive-menu',
+        label: '' // Optional: Set to empty string if you don't want a label
+    });
+});
+</script>
 </body>
 </html>

@@ -133,7 +133,7 @@
             '</' + settings.parentTag + '>'
             ].join('')
         );
-        $('.navbar-toggle').append($this.btn);
+        $('.navbar-toggle').append($this.btn);  
         if(settings.appendTo !== '') {
             $(settings.appendTo).append(menuBar);
         } else {

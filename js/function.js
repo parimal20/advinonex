@@ -28,12 +28,6 @@
     });
   }
 
-  /* Slick Menu JS */
-  $("#menu").slicknav({
-    label: "",
-    prependTo: ".responsive-menu",
-  });
-
   if ($("a[href='#top']").length) {
     $("a[href='#top']").click(function () {
       $("html, body").animate({ scrollTop: 0 }, "slow");
@@ -331,7 +325,78 @@ document.querySelectorAll('.main-menu ul li a').forEach(function(link) {
 
 });
 
+//header, footer add and slicknav initialization
+        $(document).ready(function () {
+            // Destroy any existing SlickNav instance
+            if ($('#menu').hasClass('slicknav_nav')) {
+                $('#menu').slicknav('destroy');
+            }
 
+            // Fetch header and initialize SlickNav
+            fetch('header.html')
+                .then(r => r.text())
+                .then(html => {
+                    document.getElementById('header').innerHTML = html;
+                    if ($('#menu').length) { // Check if #menu exists
+                        $('#menu').slicknav({
+                                label: '', // No label for clean button
+                                duration: 300, // Sync with CSS transitions
+                                prependTo: '.responsive-menu', // Keep in header's .responsive-menu
+                                closeOnClick: true, // Close on link click
+                                allowParentLinks: true, // Make parent text clickable for link
+                                nestedParentLinks: false, // Separate toggle to arrow only (click text for link, arrow for sub-menu)
+                                afterOpen: function() {
+                                    // console.log('hell');
+                                    $('body').addClass('menu-open'); // Slide content
+                                    $('body').addClass('slicknav_opened');
+                                    $('.main-header').addClass('navpaddingzero');
+                                },
+                                afterClose: function() {
+                                  // console.log('clo');
+                                    $('body').removeClass('menu-open'); // Reset
+                                    $('body').removeClass('slicknav_opened');
+                                    $('.main-header').removeClass('navpaddingzero');
+                                    $('#menu').slicknav('close');
+                                    // $('.navbar-toggle a').removeClass('slicknav_open');
+                                    // $('.navbar-toggle a').addClass('slicknav_collapsed');
+                                }
+                            });
+
+                            // Hierarchical active class logic
+                            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                            $('.slicknav_nav .nav-link').each(function () {
+                                const href = $(this).attr('href');
+                                if (href === currentPage) {
+                                    $(this).closest('.nav-item, .slicknav_parent').addClass('active');
+                                    // Add .active to all parent .slicknav_parent up the hierarchy
+                                    $(this).parents('.slicknav_parent').each(function () {
+                                        $(this).addClass('active');
+                                    });
+                                }
+                            });
+                    }
+                    else {
+                        console.error('Error: <ul id="menu"> not found in header.html');
+                    }
+
+                        // Close on backdrop click
+                        $(document).on('click', '.slicknav_menu', function(e) {
+                            if ($(e.target).hasClass('slicknav_menu')) {
+                                $('#menu').slicknav('close');
+                            }
+                        });
+                    console.log('SlickNav initialized:', $('.slicknav_menu').length);
+                })
+                .catch(error => console.error('Error loading header:', error));
+
+            // Fetch footer
+            fetch('footer.html')
+                .then(r => r.text())
+                .then(html => {
+                    document.getElementById('footer').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        });
 
 
 })(jQuery);
