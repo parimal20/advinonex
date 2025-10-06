@@ -332,11 +332,51 @@ document.querySelectorAll('.main-menu ul li a').forEach(function(link) {
                 $('#menu').slicknav('destroy');
             }
 
+            // till 1199.98 px hide .gradient-bg, .content-wrapper and show .newname so write js for this 
+            function handleResize() {
+              if (window.innerWidth < 1199.98) {
+                document.querySelectorAll('.gradient-bg, .content-wrapper').forEach(el => el.style.display = 'none');
+                document.querySelectorAll('.newname').forEach(el => el.style.display = 'block');
+              } else {
+                document.querySelectorAll('.gradient-bg, .content-wrapper').forEach(el => el.style.display = 'flex');
+                document.querySelectorAll('.newname').forEach(el => el.style.display = 'none');
+              }
+            }
+            handleResize(); // Initial check
             // Fetch header and initialize SlickNav
             fetch('header.html')
                 .then(r => r.text())
                 .then(html => {
                     document.getElementById('header').innerHTML = html;
+
+                    function setHeroBannerPadding() {
+                      var header = document.querySelector('.main-header');
+                      var heroSection = document.getElementById('bannerHeroSection');
+                          if (header && heroSection) {
+                              var headerHeight = header.offsetHeight;
+                              heroSection.style.paddingTop = headerHeight + 'px';
+                          }
+                    }
+
+                    //call this fucniton  only when @media screen and (max-width: 1199.98px)
+                    if (window.innerWidth >= 1199.98) {
+                      setHeroBannerPadding();
+                      window.addEventListener('resize', setHeroBannerPadding);
+                    }
+
+                    // Ensure header-fixed is set correctly on page load
+                    var $header = $('header.main-header');
+                    function toggleHeader() {
+                        var scrollY = $(window).scrollTop();
+                        if (scrollY > 80 && !$header.hasClass('header-fixed')) {
+                            $header.addClass('header-fixed');
+                        } else if (scrollY <= 80 && $header.hasClass('header-fixed')) {
+                            $header.removeClass('header-fixed');
+                        }
+                    }
+                    toggleHeader(); // Run once after header is loaded
+                    $(window).on('scroll', toggleHeader);
+
                     if ($('#menu').length) { // Check if #menu exists
                         $('#menu').slicknav({
                                 label: '', // No label for clean button

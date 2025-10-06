@@ -106,26 +106,6 @@
             width: 450px;
         }
 
-        #bannerHeroSection {
-            padding-bottom: 30px;
-            position: relative;
-            min-height: 100vh;
-            width: 100%;
-            overflow: hidden;
-        }
-
-        #bannerHeroSection .gradient-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            min-height: 100%;
-            z-index: 0;
-            pointer-events: none;
-        }
-
-
         /* Reduce excessive padding around hero section */
         #bannerHeroSection.section.section--hero {
             padding-top: 60px !important;
@@ -136,347 +116,6 @@
             padding: 64px 80px !important;
         }
 
-    /* ===== HERO SECTION ===== */
-    .hero-container {
-      position: relative;
-      width: 100%;
-      min-height: 100vh;
-      background: #f5f7fa;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      padding-top: 100px; /* Space for header */
-    }
-
-    .gradient-bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-      overflow: hidden;
-    }
-
-    .gradient-layer {
-      position: absolute;
-      width: 150%;
-      height: 150%;
-      top: -25%;
-      left: -25%;
-      opacity: 0.6;
-      mix-blend-mode: normal;
-      filter: blur(80px);
-    }
-
-    .content-wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 40px 60px 0 60px;
-      position: relative;
-      z-index: 10;
-      gap: 80px;
-      transition: all 0.4s ease;
-    }
-
-    /* Shrink content when scrolling */
-    .scrolled + .hero-container .content-wrapper {
-      transform: scale(0.95);
-      transition: transform 0.4s ease;
-    }
-
-    .left-content {
-      flex: 0 0 45%;
-      color: #1a1a1a;
-      transform: translateY(50px);
-      opacity: 0;
-      animation: slideUpFade 1.2s ease-out forwards;
-      animation-delay: 0.3s;
-    }
-
-    @keyframes slideUpFade {
-      from {
-        opacity: 0;
-        transform: translateY(50px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .subtitle {
-      font-size: 13px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      margin-bottom: 25px;
-      opacity: 0.6;
-      font-weight: 400;
-      color: #202020;
-    }
-
-    .main-title {
-      font-size: 3.8rem;
-      font-weight: 700;
-      line-height: 1.1;
-      margin-bottom: 30px;
-      color: #000;
-      transition: all 0.4s ease;
-    }
-
-    header.scrolled ~ .hero-container .main-title {
-      font-size: 3rem;
-    }
-
-    .description {
-      font-size: 18px;
-      line-height: 1.7;
-      margin-bottom: 45px;
-      opacity: 0.8;
-      font-weight: 400;
-      color: #2b2b2b;
-    }
-
-    .cta-button {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      background: #000;
-      color: white;
-      padding: 18px 38px;
-      border: none;
-      border-radius: 50px;
-      font-size: 16px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    }
-
-    .cta-button:hover {
-      background: #222;
-      transform: translateY(-2px);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-    }
-
-    .arrow {
-      transition: transform 0.3s ease;
-      font-size: 18px;
-    }
-
-    .cta-button:hover .arrow {
-      transform: translateX(5px);
-    }
-
-    .right-content {
-      flex: 0 0 50%;
-      position: relative;
-      height: 600px;
-      transform: translateX(80px);
-      opacity: 0;
-      animation: slideLeftFade 1.2s ease-out forwards;
-      animation-delay: 0.6s;
-    }
-
-    @keyframes slideLeftFade {
-      from {
-        opacity: 0;
-        transform: translateX(80px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-
-    .image-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-      gap: 15px;
-      height: 100%;
-      width: 100%;
-    }
-
-    .grid-image {
-      position: relative;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-      cursor: pointer;
-      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      animation: fadeInScale 0.8s ease-out backwards;
-        opacity: 0;
-        transform: translateX(80px);
-        animation: gridImageSlideRight 0.9s cubic-bezier(.4,0,.2,1) forwards;
-    }
-
-/* Staggered delays for each image */
-.grid-image:nth-child(1) { animation-delay: 0.2s; }
-.grid-image:nth-child(2) { animation-delay: 0.4s; }
-.grid-image:nth-child(3) { animation-delay: 0.6s; }
-.grid-image:nth-child(4) { animation-delay: 0.8s; }
-.grid-image:nth-child(5) { animation-delay: 1.0s; }
-.grid-image:nth-child(6) { animation-delay: 1.2s; }
-.grid-image:nth-child(7) { animation-delay: 1.4s; }
-.grid-image:nth-child(8) { animation-delay: 1.6s; }
-.grid-image:nth-child(9) { animation-delay: 1.8s; }
-
-@keyframes gridImageSlideRight {
-  from {
-    opacity: 0;
-    transform: translateX(80px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-    @keyframes fadeInScale {
-      from {
-        opacity: 0;
-        transform: scale(0.8);
-      }
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    .grid-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.4s ease;
-    }
-
-    .grid-image:hover {
-      transform: translateY(-5px) scale(1.03);
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
-      z-index: 10;
-    }
-
-    .grid-image:hover img {
-      transform: scale(1.1);
-    }
-
-    .image-title {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(255, 255, 255, 0.9);
-      backdrop-filter: blur(10px);
-      color: #000;
-      padding: 10px 15px;
-      font-size: 13px;
-      font-weight: 700;
-      text-align: center;
-      border-radius: 0 0 12px 12px;
-      letter-spacing: 0.5px;
-    }
-
-    @media (max-width: 1024px) {
-      .content-wrapper {
-        flex-direction: column;
-        padding: 60px 30px;
-        gap: 50px;
-      }
-
-      .left-content,
-      .right-content {
-        flex: 1 1 100%;
-      }
-
-      .main-title {
-        font-size: 3rem;
-      }
-
-      .right-content {
-        height: 500px;
-      }
-
-      .image-grid {
-        gap: 10px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      header {
-        padding: 15px 20px;
-      }
-
-      nav ul {
-        gap: 15px;
-      }
-
-      .main-title {
-        font-size: 2.5rem;
-      }
-
-      .right-content {
-        height: 400px;
-      }
-
-      .content-wrapper {
-        padding: 40px 20px;
-      }
-    }
-
-    /* svg bg color */
-            .color-shift {
-            animation: colorShift 30s infinite ease-in-out; /* Slower color change */
-        }
-        
-        @keyframes colorShift {
-            0% { filter: hue-rotate(0deg); }
-            50% { filter: hue-rotate(180deg); }
-            100% { filter: hue-rotate(0deg); }
-        }
-        
-        /* Different movement paths for each ellipse */
-        #ellipse1 {
-            animation: moveEllipse1 60s infinite ease-in-out; /* Slower movement */
-            animation-delay: 0s;
-        }
-        #ellipse2 {
-            animation: moveEllipse2 55s infinite ease-in-out; /* Slower movement */
-            animation-delay: 2s;
-        }
-        #ellipse3 {
-            animation: moveEllipse3 50s infinite ease-in-out; /* Slower movement */
-            animation-delay: 1s;
-        }
-        
-        @keyframes moveEllipse1 {
-            0% { transform: translate(0, 0); }
-            25% { transform: translate(300px, 100px); }
-            50% { transform: translate(100px, 300px); }
-            75% { transform: translate(-200px, 50px); }
-            100% { transform: translate(0, 0); }
-        }
-        
-        @keyframes moveEllipse2 {
-            0% { transform: translate(0, 0); }
-            25% { transform: translate(-250px, -150px); }
-            50% { transform: translate(150px, -200px); }
-            75% { transform: translate(-100px, 250px); }
-            100% { transform: translate(0, 0); }
-        }
-        
-        @keyframes moveEllipse3 {
-            0% { transform: translate(0, 0); }
-            25% { transform: translate(200px, -300px); }
-            50% { transform: translate(-300px, 100px); }
-            75% { transform: translate(100px, -100px); }
-            100% { transform: translate(0, 0); }
-        }
-    /* svg bg color end*/
     </style>
 
 </head>
@@ -513,417 +152,325 @@
     <div id="header"></div>    
 	<!-- Header End -->
 
+<!-- Intro Overlay -->
+<!-- <div class="intro-overlay" aria-hidden="true">
+  <h2 class="intro-text">INDUSTRY WE SERVE</h2>
+</div> -->
+
+
     <!-- Hero Section Start -->
-    <div class="page-wrap" id="bannerHeroSection">
-        <!-- desktop banner -->
+    <div class="page-wrap">
         <div class="newname">
-            <div class="customherosection">
-                <div class="navbar-outer">
-                    <div class="navbar w-100 transition position-relative p-0">
-                        <div class="navbar-block-wrapper d-flex flex-column flex-xl-row w-100 position-relative">
+        <div class="customherosection">
+            <div class="navbar-outer">
+            <div class="navbar w-100 transition position-relative p-0">
+                <div class="navbar-block-wrapper d-flex flex-column flex-xl-row w-100 position-relative">
 
-                        <!-- Renewable Energy -->
-                        <div class="navbar-block navbar-v1-block bg-gradient-1 z-index-10" data-target="energy-section" data-href="renewable.html" id="nav-renewableenergy">
-                            <h2 class="d-flex transition">
-                            Renewable Energy
-                            <span class="arrow outline"><i class="fa-solid fa-arrow-right"></i></span>
-                            </h2>
-                            <h3 class="hero-heading">Innovative solar, wind, and hybrid energy solutions driving a sustainable future.
-                                <br>
-                            <a href="renewable.html" target="_blank" class="btn btn-light text-black mt-3">
-                                Explore More <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                            </h3>
+                <!-- Renewable Energy -->
+                <div class="navbar-block navbar-v1-block bg-gradient-1 z-index-10" data-target="energy-section" data-href="renewable.html" id="nav-renewableenergy">
+                    <h2 class="d-flex transition">
+                    Renewable Energy
+                    <span class="arrow outline"><i class="fa-solid fa-arrow-right"></i></span>
+                    </h2>
+                    <h3 class="hero-heading">Innovative solar, wind, and hybrid energy solutions driving a sustainable future.
+                        <br>
+                    <a href="renewable.html" target="_blank" class="btn btn-light text-black mt-3">
+                        Explore More <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    </h3>
 
-                            <div class="navbar-icon">
-                                <img src="images/banner/renewable icon.webp" alt="Renewable Energy">
-                            </div>
-                            <div class="text-marquee-wrapper d-none d-xl-block">
-                            <div class="text-marquee-parent">
-                                <div class="text-marquee-list">
-                                <span>Solar Power Solutions</span>
-                                <span>Wind Energy Integration</span>
-                                <span>Hybrid Power Systems</span>
-                                </div>
-                                <div class="text-marquee-list">
-                                <span>Green Energy Consulting</span>
-                                <span>Smart Grid Integration</span>
-                                <span>Energy Storage Systems</span>
-                                </div>
-                            </div>
-                            </div>
+                    <div class="navbar-icon">
+                        <img src="images/banner/renewable icon.webp" alt="Renewable Energy">
+                    </div>
+                    <div class="text-marquee-wrapper d-none d-xl-block">
+                    <div class="text-marquee-parent">
+                        <div class="text-marquee-list">
+                        <span>Solar Power Solutions</span>
+                        <span>Wind Energy Integration</span>
+                        <span>Hybrid Power Systems</span>
                         </div>
-
-                        <!-- Electrical & Power Utility -->
-                        <div class="navbar-block navbar-v1-block bg-gradient-2 z-index-9" data-target="electricalpower-section" data-href="electricalpower.html" id="nav-electricalpower">
-                            <h2 class="d-flex transition">
-                            Electrical & Power Utility
-                            <span class="arrow outline"><i class="fa-solid fa-arrow-right"></i></span>
-                            </h2>
-                            <h3 class="hero-heading">Reliable power distribution and automation ensuring uninterrupted electricity supply.
-                                <br>
-                            <a href="electricalpower.html" target="_blank" class="btn btn-light text-black mt-3">
-                                Explore More <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                            </h3>
-                            <div class="navbar-icon">
-                            <img src="images/banner/plant icon.webp" alt="Electrical & Power Utility">
-                            </div>
-                            <div class="text-marquee-wrapper d-none d-xl-block">
-                            <div class="text-marquee-parent">
-                                <div class="text-marquee-list">
-                                <span>Smart Grids</span>
-                                <span>Substation Automation</span>
-                                <span>Load Management</span>
-                                <span>Power Quality</span>
-                                </div>
-                                <div class="text-marquee-list">
-                                <span>Energy Audits</span>
-                                <span>Metering Systems</span>
-                                <span>SCADA Integration</span>
-                                <span>Transmission Efficiency</span>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-
-                        <!-- Water SCADA -->
-                        <div class="navbar-block navbar-v1-block bg-gradient-3 z-index-8" data-target="water-section" data-href="waterscada.html" id="nav-waterscada">
-                            <h2 class="d-flex transition">
-                            Water SCADA
-                            <span class="arrow outline"><i class="fa-solid fa-arrow-right"></i></span>
-                            </h2>
-                            <h3 class="hero-heading">Smart water management with real-time monitoring and automation.
-                                <br>
-                            <a href="waterscada.html" target="_blank" class="btn btn-light text-black mt-3">
-                                Explore More <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                            </h3>
-                            <div class="navbar-icon">
-                            <img src="images/banner/water icon.webp" alt="Water SCADA">
-                            </div>
-                            <div class="text-marquee-wrapper d-none d-xl-block">
-                            <div class="text-marquee-parent">
-                                <div class="text-marquee-list">
-                                <span>Water Treatment</span>
-                                <span>Leakage Detection</span>
-                                <span>Flow Monitoring</span>
-                                </div>
-                                <div class="text-marquee-list">
-                                <span>Remote Control</span>
-                                <span>Pressure Regulation</span>
-                                <span>Distribution Management</span>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-
-                        <!-- Process Industry -->
-                        <div class="navbar-block navbar-v1-block bg-gradient-4 z-index-7" data-target="process-section" data-href="processindustry.html" id="nav-processindustry">
-                            <h2 class="d-flex transition">
-                            Process Industry
-                            <span class="arrow outline"><i class="fa-solid fa-arrow-right"></i></span>
-                            </h2>
-                            <h3 class="hero-heading">Automation and control systems boosting efficiency across industries.
-                                <br>
-                            <a href="processindustry.html" target="_blank" class="btn btn-light text-black mt-3">
-                                Explore More <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                            </h3>
-                            <div class="navbar-icon">
-                            <img src="images/banner/industry icon.webp" alt="Process Industry">
-                            </div>
-                            <div class="text-marquee-wrapper d-none d-xl-block">
-                            <div class="text-marquee-parent">
-                                <div class="text-marquee-list">
-                                <span>PLC/DCS Systems</span>
-                                <span>Process Optimization</span>
-                                <span>Safety Systems</span>
-                                <span>Industrial IoT</span>
-                                </div>
-                                <div class="text-marquee-list">
-                                <span>Automation Solutions</span>
-                                <span>Predictive Maintenance</span>
-                                <span>Data Analytics</span>
-                                <span>Quality Control</span>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-
-                        <!-- Marine Offshore -->
-                        <div class="navbar-block navbar-v1-block bg-gradient-5 z-index-6" data-target="marine-section" data-href="marine.html" id="nav-marineoffshore">
-                            <h2 class="d-flex transition">
-                            Marine Offshore
-                            <span class="arrow outline"><i class="fa-solid fa-arrow-right"></i></span>
-                            </h2>
-                            <h3 class="hero-heading">Reliable offshore automation and monitoring for marine operations.
-                                <br>
-                            <a href="marine.html" target="_blank" class="btn btn-light text-black mt-3">
-                                Explore More <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                            </h3>
-                            <div class="navbar-icon">
-                            <img src="images/banner/marine icon.webp" alt="Marine Offshore">
-                            </div>
-                            <div class="text-marquee-wrapper d-none d-xl-block">
-                            <div class="text-marquee-parent">
-                                <div class="text-marquee-list">
-                                <span>Ship Automation</span>
-                                <span>Offshore SCADA</span>
-                                <span>Remote Monitoring</span>
-                                <span>Safety Systems</span>
-                                </div>
-                                <div class="text-marquee-list">
-                                <span>Energy Optimization</span>
-                                <span>Control Systems</span>
-                                <span>Navigation Support</span>
-                                <span>Communication Systems</span>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-
-                        <!-- Data Center -->
-                        <div class="navbar-block navbar-v1-block bg-gradient-6 z-index-5" data-target="data-section" data-href="datacenter.html" id="nav-datacenter">
-                            <h2 class="d-flex transition">
-                            Data Center
-                            <span class="arrow outline"><i class="fa-solid fa-arrow-right"></i></span>
-                            </h2>
-                            <h3 class="hero-heading">High-performance solutions ensuring uptime, efficiency, and security.
-                                <br>
-                            <a href="datacenter.html" target="_blank" class="btn btn-light text-black mt-3">
-                                Explore More <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                            </h3>
-                            <div class="navbar-icon">
-                            <img src="images/banner/data icon.webp" alt="Data Center">
-                            </div>
-                            <div class="text-marquee-wrapper d-none d-xl-block">
-                            <div class="text-marquee-parent">
-                                <div class="text-marquee-list">
-                                <span>Power Backup</span>
-                                <span>Cooling Systems</span>
-                                <span>Network Security</span>
-                                <span>Monitoring Tools</span>
-                                </div>
-                                <div class="text-marquee-list">
-                                <span>Disaster Recovery</span>
-                                <span>Server Optimization</span>
-                                <span>Cloud Integration</span>
-                                <span>Data Protection</span>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-
-                        <!-- SME Industry -->
-                        <div class="navbar-block navbar-v1-block bg-gradient-7 z-index-4" data-target="sme-section" data-href="smeindusrty.html" id="nav-smeindustry">
-                            <h2 class="d-flex transition">
-                            SME Industry
-                            <span class="arrow outline"><i class="fa-solid fa-arrow-right"></i></span>
-                            </h2>
-                            <h3 class="hero-heading">Affordable automation and IT solutions designed for SMEs.
-                                <br>
-                            <a href="smeindusrty.html" target="_blank" class="btn btn-light text-black mt-3">
-                                Explore More <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                            </h3>
-                            <div class="navbar-icon">
-                            <img src="images/banner/sme icon.webp" alt="SME Industry">
-                            </div>
-                            <div class="text-marquee-wrapper d-none d-xl-block">
-                            <div class="text-marquee-parent">
-                                <div class="text-marquee-list">
-                                <span>ERP Solutions</span>
-                                <span>Smart Manufacturing</span>
-                                <span>Process Automation</span>
-                                </div>
-                                <div class="text-marquee-list">
-                                <span>Cost Optimization</span>
-                                <span>Digital Transformation</span>
-                                <span>Productivity Boost</span>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-
-                        <!-- Mining Industry -->
-                        <div class="navbar-block navbar-v1-block bg-gradient-8 z-index-3" data-target="mining-section" data-href="mining.html" id="nav-miningindustry">
-                            <h2 class="d-flex transition">
-                            Mining Industry
-                            <span class="arrow outline"><i class="fa-solid fa-arrow-right"></i></span>
-                            </h2>
-                            <h3 class="hero-heading">Technology-driven automation for safe and efficient mining operations.
-                                <br>
-                            <a href="mining.html" target="_blank" class="btn btn-light text-black mt-3">
-                                Explore More <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                            </h3>
-                            <div class="navbar-icon">
-                            <img src="images/banner/mining icon.webp" alt="Mining Industry">
-                            </div>
-                            <div class="text-marquee-wrapper d-none d-xl-block">
-                            <div class="text-marquee-parent">
-                                <div class="text-marquee-list">
-                                <span>Mining SCADA</span>
-                                <span>Remote Equipment Monitoring</span>
-                                <span>Safety Systems</span>
-                                </div>
-                                <div class="text-marquee-list">
-                                <span>Energy Efficiency</span>
-                                <span>Fleet Management</span>
-                                <span>Automation Solutions</span>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-
-                        <!-- Agriculture -->
-                        <div class="navbar-block navbar-v1-block bg-gradient-9 z-index-2" data-target="agriculture-section" data-href="agriculture.html" id="nav-agriculture">
-                            <h2 class="d-flex transition">
-                            Agriculture
-                            <span class="arrow outline"><i class="fa-solid fa-arrow-right"></i></span>
-                            </h2>
-                            <h3 class="hero-heading">
-                            Smart farming powered by IoT, automation, and sustainable practices.
-                            <br>
-                            <a href="agriculture.html" target="_blank" class="btn btn-light text-black mt-3">
-                                Explore More <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                            </h3>
-
-                            <div class="navbar-icon">
-                            <img src="images/banner/agri icon.webp" alt="Agriculture">
-                            </div>
-                            <div class="text-marquee-wrapper d-none d-xl-block">
-                            <div class="text-marquee-parent">
-                                <div class="text-marquee-list">
-                                <span>Precision Farming</span>
-                                <span>Smart Irrigation</span>
-                                <span>Soil Monitoring</span>
-                                </div>
-                                <div class="text-marquee-list">
-                                <span>Crop Yield Analysis</span>
-                                <span>Greenhouse Automation</span>
-                                <span>Sustainable Farming</span>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-
-                        </div>
-
-                        <div class="go-back">
-                        <a href="#main" class="link link-xl back-to-menu text-white" data-text="Back to Menu">
-                            <span>Back to Menu</span> <b class="arrow outline"><i class="fa-solid fa-arrow-right"></i></b>
-                        </a>
+                        <div class="text-marquee-list">
+                        <span>Green Energy Consulting</span>
+                        <span>Smart Grid Integration</span>
+                        <span>Energy Storage Systems</span>
                         </div>
                     </div>
+                    </div>
                 </div>
-                <div class="nav-toggler d-xl-none">
-                <a href="#" class="nav-toggle-btn">
-                    <span></span>
+
+                <!-- Electrical & Power Utility -->
+                <div class="navbar-block navbar-v1-block bg-gradient-2 z-index-9" data-target="electricalpower-section" data-href="electricalpower.html" id="nav-electricalpower">
+                    <h2 class="d-flex transition">
+                    Electrical & Power Utility
+                    <span class="arrow outline"><i class="fa-solid fa-arrow-right"></i></span>
+                    </h2>
+                    <h3 class="hero-heading">Reliable power distribution and automation ensuring uninterrupted electricity supply.
+                        <br>
+                    <a href="electricalpower.html" target="_blank" class="btn btn-light text-black mt-3">
+                        Explore More <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    </h3>
+                    <div class="navbar-icon">
+                    <img src="images/banner/plant icon.webp" alt="Electrical & Power Utility">
+                    </div>
+                    <div class="text-marquee-wrapper d-none d-xl-block">
+                    <div class="text-marquee-parent">
+                        <div class="text-marquee-list">
+                        <span>Smart Grids</span>
+                        <span>Substation Automation</span>
+                        <span>Load Management</span>
+                        <span>Power Quality</span>
+                        </div>
+                        <div class="text-marquee-list">
+                        <span>Energy Audits</span>
+                        <span>Metering Systems</span>
+                        <span>SCADA Integration</span>
+                        <span>Transmission Efficiency</span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Water SCADA -->
+                <div class="navbar-block navbar-v1-block bg-gradient-3 z-index-8" data-target="water-section" data-href="waterscada.html" id="nav-waterscada">
+                    <h2 class="d-flex transition">
+                    Water SCADA
+                    <span class="arrow outline"><i class="fa-solid fa-arrow-right"></i></span>
+                    </h2>
+                    <h3 class="hero-heading">Smart water management with real-time monitoring and automation.
+                        <br>
+                    <a href="waterscada.html" target="_blank" class="btn btn-light text-black mt-3">
+                        Explore More <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    </h3>
+                    <div class="navbar-icon">
+                    <img src="images/banner/water icon.webp" alt="Water SCADA">
+                    </div>
+                    <div class="text-marquee-wrapper d-none d-xl-block">
+                    <div class="text-marquee-parent">
+                        <div class="text-marquee-list">
+                        <span>Water Treatment</span>
+                        <span>Leakage Detection</span>
+                        <span>Flow Monitoring</span>
+                        </div>
+                        <div class="text-marquee-list">
+                        <span>Remote Control</span>
+                        <span>Pressure Regulation</span>
+                        <span>Distribution Management</span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Process Industry -->
+                <div class="navbar-block navbar-v1-block bg-gradient-4 z-index-7" data-target="process-section" data-href="processindustry.html" id="nav-processindustry">
+                    <h2 class="d-flex transition">
+                    Process Industry
+                    <span class="arrow outline"><i class="fa-solid fa-arrow-right"></i></span>
+                    </h2>
+                    <h3 class="hero-heading">Automation and control systems boosting efficiency across industries.
+                        <br>
+                    <a href="processindustry.html" target="_blank" class="btn btn-light text-black mt-3">
+                        Explore More <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    </h3>
+                    <div class="navbar-icon">
+                    <img src="images/banner/industry icon.webp" alt="Process Industry">
+                    </div>
+                    <div class="text-marquee-wrapper d-none d-xl-block">
+                    <div class="text-marquee-parent">
+                        <div class="text-marquee-list">
+                        <span>PLC/DCS Systems</span>
+                        <span>Process Optimization</span>
+                        <span>Safety Systems</span>
+                        <span>Industrial IoT</span>
+                        </div>
+                        <div class="text-marquee-list">
+                        <span>Automation Solutions</span>
+                        <span>Predictive Maintenance</span>
+                        <span>Data Analytics</span>
+                        <span>Quality Control</span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Marine Offshore -->
+                <div class="navbar-block navbar-v1-block bg-gradient-5 z-index-6" data-target="marine-section" data-href="marine.html" id="nav-marineoffshore">
+                    <h2 class="d-flex transition">
+                    Marine Offshore
+                    <span class="arrow outline"><i class="fa-solid fa-arrow-right"></i></span>
+                    </h2>
+                    <h3 class="hero-heading">Reliable offshore automation and monitoring for marine operations.
+                        <br>
+                    <a href="marine.html" target="_blank" class="btn btn-light text-black mt-3">
+                        Explore More <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    </h3>
+                    <div class="navbar-icon">
+                    <img src="images/banner/marine icon.webp" alt="Marine Offshore">
+                    </div>
+                    <div class="text-marquee-wrapper d-none d-xl-block">
+                    <div class="text-marquee-parent">
+                        <div class="text-marquee-list">
+                        <span>Ship Automation</span>
+                        <span>Offshore SCADA</span>
+                        <span>Remote Monitoring</span>
+                        <span>Safety Systems</span>
+                        </div>
+                        <div class="text-marquee-list">
+                        <span>Energy Optimization</span>
+                        <span>Control Systems</span>
+                        <span>Navigation Support</span>
+                        <span>Communication Systems</span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Data Center -->
+                <div class="navbar-block navbar-v1-block bg-gradient-6 z-index-5" data-target="data-section" data-href="datacenter.html" id="nav-datacenter">
+                    <h2 class="d-flex transition">
+                    Data Center
+                    <span class="arrow outline"><i class="fa-solid fa-arrow-right"></i></span>
+                    </h2>
+                    <h3 class="hero-heading">High-performance solutions ensuring uptime, efficiency, and security.
+                        <br>
+                    <a href="datacenter.html" target="_blank" class="btn btn-light text-black mt-3">
+                        Explore More <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    </h3>
+                    <div class="navbar-icon">
+                    <img src="images/banner/data icon.webp" alt="Data Center">
+                    </div>
+                    <div class="text-marquee-wrapper d-none d-xl-block">
+                    <div class="text-marquee-parent">
+                        <div class="text-marquee-list">
+                        <span>Power Backup</span>
+                        <span>Cooling Systems</span>
+                        <span>Network Security</span>
+                        <span>Monitoring Tools</span>
+                        </div>
+                        <div class="text-marquee-list">
+                        <span>Disaster Recovery</span>
+                        <span>Server Optimization</span>
+                        <span>Cloud Integration</span>
+                        <span>Data Protection</span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- SME Industry -->
+                <div class="navbar-block navbar-v1-block bg-gradient-7 z-index-4" data-target="sme-section" data-href="smeindusrty.html" id="nav-smeindustry">
+                    <h2 class="d-flex transition">
+                    SME Industry
+                    <span class="arrow outline"><i class="fa-solid fa-arrow-right"></i></span>
+                    </h2>
+                    <h3 class="hero-heading">Affordable automation and IT solutions designed for SMEs.
+                        <br>
+                    <a href="smeindusrty.html" target="_blank" class="btn btn-light text-black mt-3">
+                        Explore More <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    </h3>
+                    <div class="navbar-icon">
+                    <img src="images/banner/sme icon.webp" alt="SME Industry">
+                    </div>
+                    <div class="text-marquee-wrapper d-none d-xl-block">
+                    <div class="text-marquee-parent">
+                        <div class="text-marquee-list">
+                        <span>ERP Solutions</span>
+                        <span>Smart Manufacturing</span>
+                        <span>Process Automation</span>
+                        </div>
+                        <div class="text-marquee-list">
+                        <span>Cost Optimization</span>
+                        <span>Digital Transformation</span>
+                        <span>Productivity Boost</span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Mining Industry -->
+                <div class="navbar-block navbar-v1-block bg-gradient-8 z-index-3" data-target="mining-section" data-href="mining.html" id="nav-miningindustry">
+                    <h2 class="d-flex transition">
+                    Mining Industry
+                    <span class="arrow outline"><i class="fa-solid fa-arrow-right"></i></span>
+                    </h2>
+                    <h3 class="hero-heading">Technology-driven automation for safe and efficient mining operations.
+                        <br>
+                    <a href="mining.html" target="_blank" class="btn btn-light text-black mt-3">
+                        Explore More <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    </h3>
+                    <div class="navbar-icon">
+                    <img src="images/banner/mining icon.webp" alt="Mining Industry">
+                    </div>
+                    <div class="text-marquee-wrapper d-none d-xl-block">
+                    <div class="text-marquee-parent">
+                        <div class="text-marquee-list">
+                        <span>Mining SCADA</span>
+                        <span>Remote Equipment Monitoring</span>
+                        <span>Safety Systems</span>
+                        </div>
+                        <div class="text-marquee-list">
+                        <span>Energy Efficiency</span>
+                        <span>Fleet Management</span>
+                        <span>Automation Solutions</span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Agriculture -->
+                <div class="navbar-block navbar-v1-block bg-gradient-9 z-index-2" data-target="agriculture-section" data-href="agriculture.html" id="nav-agriculture">
+                    <h2 class="d-flex transition">
+                    Agriculture
+                    <span class="arrow outline"><i class="fa-solid fa-arrow-right"></i></span>
+                    </h2>
+                    <h3 class="hero-heading">
+                    Smart farming powered by IoT, automation, and sustainable practices.
+                    <br>
+                    <a href="agriculture.html" target="_blank" class="btn btn-light text-black mt-3">
+                        Explore More <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    </h3>
+
+                    <div class="navbar-icon">
+                    <img src="images/banner/agri icon.webp" alt="Agriculture">
+                    </div>
+                    <div class="text-marquee-wrapper d-none d-xl-block">
+                    <div class="text-marquee-parent">
+                        <div class="text-marquee-list">
+                        <span>Precision Farming</span>
+                        <span>Smart Irrigation</span>
+                        <span>Soil Monitoring</span>
+                        </div>
+                        <div class="text-marquee-list">
+                        <span>Crop Yield Analysis</span>
+                        <span>Greenhouse Automation</span>
+                        <span>Sustainable Farming</span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                </div>
+
+                <div class="go-back">
+                <a href="#main" class="link link-xl back-to-menu text-white" data-text="Back to Menu">
+                    <span>Back to Menu</span> <b class="arrow outline"><i class="fa-solid fa-arrow-right"></i></b>
                 </a>
                 </div>
             </div>
-        </div>
-
-        <!-- mobile banner -->
-        <div class="gradient-bg">
-            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 450">
-                <defs>
-                    <filter id="bbblurry-filter" x="-100%" y="-100%" width="400%" height="400%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feGaussianBlur stdDeviation="116" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic" edgeMode="none" result="blur"></feGaussianBlur>
-                    </filter>
-                </defs>
-                <g filter="url(#bbblurry-filter)">
-                    <ellipse id="ellipse1" class="color-shift" rx="150" ry="150" cx="557.958467202175" cy="141.7436963126895" fill="hsla(102, 43%, 78%, 1.00)"></ellipse>
-                    <ellipse id="ellipse2" class="color-shift" rx="150" ry="150" cx="222.1053495688451" cy="156.1995722284571" fill="hsla(126, 62%, 69%, 1.00)"></ellipse>
-                    <ellipse id="ellipse3" class="color-shift" rx="150" ry="150" cx="393.2042467460725" cy="430.8538289239806" fill="hsla(204, 65%, 56%, 1.00)"></ellipse>
-                </g>
-            </svg>
-        </div>
-        <div class="content-wrapper">
-            <div class="left-content">
-                <div class="subtitle">AUTOMATION. POWER. FUTURE-FIRST SOLUTIONS</div>
-                <h1 class="main-title">
-                Engineering the Next Era<br>
-                of Industrial Intelligence
-                </h1>
-                <p class="description">
-                We deliver smart automation, SCADA, and energy solutions to power industries, infrastructure, and sustainable growth.  
-                From conception to commissioning—trusted, reliable, future-ready.
-                </p>
-                <button class="cta-button">
-                    <a href="industry.html" target="_blank" style="color: #f0ffff;">Explore Our Solutions</a>
-                    <span class="arrow">→</span>
-                </button>
             </div>
-            
-            <div class="right-content">
-                <div class="image-grid">
-                    <a href="renewable.html" target="_blank" class="d-flex">
-                        <div class="grid-image">
-                            <img src="./images/banner/renewable energy.webp" alt="Renewable Energy">
-                            <div class="image-title">Renewable Energy</div>
-                        </div>
-                    </a>
-                    <a href="electricalpower.html" target="_blank" class="d-flex">
-                        <div class="grid-image">
-                            <img src="./images/banner/electrical.webp" alt="Industry">
-                            <div class="image-title">Electrical & Power Utility</div>
-                        </div>
-                    </a>
-                    <a href="waterscada.html" target="_blank" class="d-flex">
-                        <div class="grid-image">
-                            <img src="./images/banner/water.webp" alt="Technology">
-                            <div class="image-title">Water SCADA</div>
-                        </div>
-                    </a>
-                    <a href="processindustry.html" target="_blank" class="d-flex">
-                        <div class="grid-image">
-                            <img src="./images/banner/industry.webp" alt="Agriculture">
-                            <div class="image-title">Process Industry</div>
-                        </div>
-                    </a>
-
-                    <a href="marine.html" target="_blank" class="d-flex">
-                        <div class="grid-image">
-                            <img src="./images/banner/marine.webp" alt="Maritime">
-                            <div class="image-title">Marine Offshore</div>
-                        </div>
-                    </a>
-
-                    <a href="datacenter.html" target="_blank" class="d-flex">
-                        <div class="grid-image">
-                            <img src="./images/banner/datacenter.webp" alt="Data Center">
-                            <div class="image-title">Data Center</div>
-                        </div>
-                    </a>
-
-                    <a href="smeindusrty.html" target="_blank" class="d-flex">
-                    <div class="grid-image">
-                        <img src="./images/banner/sme.webp" alt="Infrastructure">
-                        <div class="image-title">SME Industry</div>
-                    </div>
-                    </a>
-
-                    <a href="mining.html" target="_blank" class="d-flex">
-                        <div class="grid-image">
-                            <img src="./images/banner/mining.webp" alt="Manufacturing">
-                            <div class="image-title">Mining Industry</div>
-                        </div>
-                    </a>
-
-                    <a href="agriculture.html" target="_blank" class="d-flex">
-                        <div class="grid-image">
-                            <img src="./images/banner/agriculture.webp" alt="Construction">
-                            <div class="image-title">Agriculture</div>
-                        </div>
-                    </a>
-                </div>
+            <div class="nav-toggler d-xl-none">
+            <a href="#" class="nav-toggle-btn">
+                <span></span>
+            </a>
             </div>
+        </div>
         </div>
     </div>
     <!-- Hero Section End -->
