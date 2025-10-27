@@ -5,8 +5,18 @@
   var $body = $("body");
 
   /* Preloader Effect */
-  $window.on("load", function () {
-    $(".preloader").fadeOut(600);
+  $(window).on("load", function () {
+    // Fade out preloader first
+    $(".preloader").fadeOut("slow", function () {
+
+      // After preloader hides, animate images
+      const images = document.querySelectorAll(".grid-image");
+      images.forEach((img, index) => {
+        setTimeout(() => {
+          img.classList.add("show");
+        }, index * 200); // staggered delay (200ms each)
+      });
+    });
   });
 
   /* Sticky Header */
@@ -404,7 +414,7 @@ document.querySelectorAll('.main-menu ul li a').forEach(function(link) {
 
                             // Hierarchical active class logic
                             const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-                            $('.slicknav_nav .nav-link').each(function () {
+                            $('.navbar-nav .nav-link').each(function () {
                                 const href = $(this).attr('href');
                                 if (href === currentPage) {
                                     $(this).closest('.nav-item, .slicknav_parent').addClass('active');

@@ -43,7 +43,8 @@
 	<!-- Google Fonts Css-->
 	<link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
 
 	<!-- Bootstrap Css -->
 	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -91,6 +92,224 @@
         0% { transform: rotate(0deg); }
         100% { transform: rotate(360deg); }
     }
+
+
+.our-approach .section-row{
+    margin-bottom: 40px;
+}
+
+/* Custom Infinite Slider Styles */
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card p {
+  line-height: 1.6;
+}
+
+.slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding: 36px 0;
+    background: #fff;
+}
+
+.slider-track {
+    display: flex;
+    align-items: stretch;
+    will-change: transform;
+}
+
+.project-full-content.hidden {
+    display: none;
+}
+
+.read-more-btn:hover {
+    background: #0056b3;
+    color: #ffffff;
+}
+
+/* Modal Styles (Update to Match Your Existing Modal) */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    background: rgba(0, 0, 0, 0.45);
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    overflow-y: auto;
+}
+
+.modal.active {
+    display: flex;
+}
+
+#projectModal .modal-content {
+    width: 90%;
+    max-width: 90%;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 8px 26px rgba(3, 10, 25, 0.2);
+    overflow: auto;
+}
+
+#projectModal .modal-content p{
+    color: #404040;
+}
+
+#projectModal .close-btn {
+    font-size: 32px;
+    cursor: pointer;
+    color: red;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .card {
+        flex: 0 0 80vw;
+        min-width: 200px;
+        margin-right: 10px;
+    }
+
+    .read-more-btn {
+        bottom: 15px;
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+}
+
+.projectcontent {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;   /* Number of lines visible in card */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5;
+  max-height: calc(1.5em * 4); /* helps older browsers */
+}
+
+/* Existing styles remain... */
+
+/* New Card Styles */
+.card {
+  background: white;
+  border: 0px solid !important;
+  border-radius: 16px !important;
+  padding: 80px 40px 40px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1;
+  margin-top: 60px;
+  max-width: 400px; /* Match slider card width */
+  min-height: 300px; /* Ensure consistent height with slider */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+    transition: all 0.3s ease;
+      flex: 0 0 30vw;
+    min-width: 250px;
+    margin-right: var(--gap, 20px);
+    box-sizing: border-box;
+}
+
+
+.avatar-container {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  padding: 5px;
+  background: white;
+  display: inline-block;
+  box-shadow: 0px -5px 5px 1px rgba(0, 0, 0, 0.15);
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 25px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-grow: 1; /* Allow text to push button down */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Limit to 4 lines */
+  -webkit-box-orient: vertical;
+}
+
+.read-more-btn {
+  width: 100%;
+  align-self: center;
+  margin-bottom: 20px; /* Space from bottom */
+}
+
+
+/* Responsive Adjustments for Slider Context */
+@media (max-width: 768px) {
+  .card {
+    padding: 70px 30px 30px;
+    margin-top: 50px;
+    flex: 0 0 80vw;
+    min-width: 200px;
+    margin-right: 10px;
+  }
+  .avatar-container {
+    top: -50px;
+  }
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  .testimonial {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 60px 20px 25px;
+    margin-top: 45px;
+  }
+  .avatar-container {
+    top: -45px;
+  }
+  .avatar {
+    width: 90px;
+    height: 90px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  .testimonial {
+    font-size: 14px;
+  }
+}
+
 </style>
 
 </head>
@@ -161,7 +380,6 @@
                 <!-- Customer Visits Section -->
                 <section class="section visits-section">
                     <div class="container">
-
                         <div class="visits-grid">
                             <!-- Visit Card 1 -->
                             <div class="visit-card">
@@ -216,9 +434,27 @@
                                 </div>
                                 <div class="photo-counter">21 Photos</div>
                             </div>
+
+                            <!-- Visit Card 4 -->
+                            <div class="visit-card">
+                                <div class="card-background" style="background-image: url('images/testimonials/Siemens/Picture3.webp')"></div>
+                                <div class="card-overlay">
+                                    <div>
+                                        <div class="client-logo">S</div>
+                                    </div>
+                                    <div class="card-content">
+                                        <h3 class="client-name">Siemens SCADA Wireless POC</h3>
+                                        <p class="visit-description">Wireless SCADA–RTU POC via Teltonika RUT200.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <span class="visit-date">September 2025</span>
+                                    </div>
+                                </div>
+                                <div class="photo-counter">11 Photos</div>
+                            </div>
                         </div>
                     </div>
-                </section>
+                </section>  
 
                 <!-- Gallery Modals -->
                 <div id="gallery1" class="gallery-modal">
@@ -238,6 +474,87 @@
         </div>
     </div>
     <!-- Page Services End -->
+
+    <div class="our-approach bg-section mb-5">
+        <div class="container">
+            <div class="row section-row align-items-center">
+                <div class="col-lg-12">
+                    <!-- Section Title Start -->
+                    <div class="section-title text-center">
+                        <h3 class="wow fadeInUp">Project Highlights</h3>
+                        <h2 class="wow fadeInUp" data-wow-delay="0.25s">
+                            Showcasing our <span>key collaborations & success stories</span>
+                        </h2>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+            </div>
+            <!-- Custom Infinite Slider -->
+            <div class="slider-wrapper" id="sliderWrapper" data-speed="85">
+                <div class="slider-track d-flex" id="sliderTrack">
+                    <!-- Slide 1 -->
+                    <!-- <div class="slide"> -->
+                        <div class="card">
+                            <div class="avatar-container">
+                            <div class="avatar">
+                                <img src="./images/iocl1.webp" alt="IOCL Logo">
+                            </div>
+                            </div>
+                            <h5>Sitra Order for IOCL</h5>
+                            <p class="testimonial">
+                                Advinonex Automation is delighted to announce a new customer milestone – the award of a prestigious project from Sitra, with Indian Oil Corporation Limited (IOCL) as the end customer.
+                                <br><br>
+                                This engagement covers a total of 23 controller locations across multiple critical pipeline projects:
+                                <br>
+                                Project&nbsp;1: 16 locations – HMRPL-CBPL Pipeline Controller requirement<br>
+                                Project&nbsp;2: 2 locations – Group-A of HRPL-MER_CUF-JGPL Pipeline<br>
+                                Project&nbsp;3: 5 locations – Group-B of HRPL-MER_CUF-JGPL Pipeline
+                                <br><br>
+                                As part of this project, Advinonex will supply state-of-the-art Brodersen RTU32M Controllers, enabling advanced automation, reliability, and efficiency across IOCL’s pipeline infrastructure.
+                                <br><br>
+                                This milestone further strengthens Advinonex’s commitment to delivering cutting-edge automation solutions for the energy sector and highlights our growing collaboration with strategic industry leaders.
+                                <br><br>
+                                We thank Sitra and IOCL for their trust in Advinonex and look forward to successful execution and long-term partnership.
+                            </p>
+                            <button class="btn btn-outline-primary btn-sm mt-auto read-more-btn" data-title="Project B">Read More</button>
+                        </div>
+                    <!-- </div> -->
+
+                    <!-- Slide 2 -->
+                    <!-- <div class="slide"> -->
+                    <div class="card">
+                        <div class="avatar-container">
+                        <div class="avatar">
+                            <img src="./images/siemens1.webp" alt="Siemens Logo">
+                        </div>
+                        </div>
+                        <h5>Siemens SCADA Wireless POC</h5>
+                        <p class="testimonial">
+                            We recently conducted a Proof of Concept (PoC) test demonstrating Brodersen RTU32M Controller wireless communication with Siemens SP5 SCADA over the IEC-60870-5-104 protocol.
+                            <br><br>
+                            The test was carried out jointly in the presence of the Siemens India team, and we are glad to report that it was a great success.
+                            <br><br>
+                            We sincerely thank the Siemens team for witnessing the demonstration and acknowledging our efforts. This success reinforces our commitment to delivering robust and reliable automation and communication solutions.
+                        </p>
+                        <button class="btn btn-outline-primary btn-sm mt-auto read-more-btn" data-title="Project B">Read More</button>
+                    </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <!-- Modal -->
+  <div class="modal" id="projectModal">
+    <div class="modal-content">
+
+    <div style="display: flex; align-items: center; margin-bottom: 20px; padding: 12px 10px; flex-direction: row; justify-content: space-between; background-color: #042a2d; border-radius: 5px;">
+        <h3 id="modalTitle" style="color:#fff">Title</h3>
+        <span class="close-btn" id="modalClose">&times;</span>
+    </div> 
+      <p id="modalDetails">Details</p>
+    </div>
+  </div>
 
     <!-- Footer Start -->
     <div id="footer"></div>   
@@ -278,139 +595,293 @@
     <script src="js/function.js"></script>
 	
 <script>
-            function closeGallery(galleryId) {
-            
-            let modal = document.getElementById(galleryId);
-            console.log(modal);
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
+    // Preloader and Other Initializations (if any) can remain here
+
     $(document).ready(function () {
-                // Define image paths (replace with actual paths or API)
-                const imagePaths = {
-                    indorama: [
-                        'images/testimonials/Indorama/1.webp',
-                        'images/testimonials/Indorama/2.webp',
-                        'images/testimonials/Indorama/3.webp',
-                        'images/testimonials/Indorama/4.webp',
-                        'images/testimonials/Indorama/5.webp'
-                    ],
-                    ziv: [
-                        'images/testimonials/ZIV/1.webp',
-                        'images/testimonials/ZIV/2.webp',
-                        'images/testimonials/ZIV/3.webp',
-                    ],
-                    elecramaexhibition: [
-                        'images/testimonials/Elecrama/1.webp',
-                        'images/testimonials/Elecrama/2.webp',
-                        'images/testimonials/Elecrama/3.webp',
-                        'images/testimonials/Elecrama/4.webp',
-                        'images/testimonials/Elecrama/5.webp',
-                        'images/testimonials/Elecrama/6.webp',
-                        'images/testimonials/Elecrama/7.webp',
-                        'images/testimonials/Elecrama/8.webp',
-                        'images/testimonials/Elecrama/9.webp',
-                        'images/testimonials/Elecrama/10.webp',
-                        'images/testimonials/Elecrama/11.webp',
-                        'images/testimonials/Elecrama/12.webp',
-                        'images/testimonials/Elecrama/13.webp',
-                        'images/testimonials/Elecrama/14.webp',
-                        'images/testimonials/Elecrama/15.webp',
-                        'images/testimonials/Elecrama/16.webp',
-                        'images/testimonials/Elecrama/17.webp',
-                        'images/testimonials/Elecrama/18.webp',
-                        'images/testimonials/Elecrama/19.webp',
-                        'images/testimonials/Elecrama/20.webp',
-                        'images/testimonials/Elecrama/21.webp'
-                    ]
-                };
+        // Gallery Modal Logic
+        const galleryModal = document.getElementById('gallery1');
+        const imagePaths = {
+            indorama: [
+                'images/testimonials/Indorama/1.webp',
+                'images/testimonials/Indorama/2.webp',
+                'images/testimonials/Indorama/3.webp',
+                'images/testimonials/Indorama/4.webp',
+                'images/testimonials/Indorama/5.webp'
+            ],
+            ziv: [
+                'images/testimonials/ZIV/1.webp',
+                'images/testimonials/ZIV/2.webp',
+                'images/testimonials/ZIV/3.webp'
+            ],
+            elecramaexhibition: [
+                'images/testimonials/Elecrama/1.webp',
+                'images/testimonials/Elecrama/2.webp',
+                'images/testimonials/Elecrama/3.webp',
+                'images/testimonials/Elecrama/4.webp',
+                'images/testimonials/Elecrama/5.webp',
+                'images/testimonials/Elecrama/6.webp',
+                'images/testimonials/Elecrama/7.webp',
+                'images/testimonials/Elecrama/8.webp',
+                'images/testimonials/Elecrama/9.webp',
+                'images/testimonials/Elecrama/10.webp',
+                'images/testimonials/Elecrama/11.webp',
+                'images/testimonials/Elecrama/12.webp',
+                'images/testimonials/Elecrama/13.webp',
+                'images/testimonials/Elecrama/14.webp',
+                'images/testimonials/Elecrama/15.webp',
+                'images/testimonials/Elecrama/16.webp',
+                'images/testimonials/Elecrama/17.webp',
+                'images/testimonials/Elecrama/18.webp',
+                'images/testimonials/Elecrama/19.webp',
+                'images/testimonials/Elecrama/20.webp',
+                'images/testimonials/Elecrama/21.webp'
+            ],
+            siemensscadawirelesspoc: [
+                'images/testimonials/Siemens/Picture1.webp',
+                'images/testimonials/Siemens/Picture2.webp',
+                'images/testimonials/Siemens/Picture3.webp',
+                'images/testimonials/Siemens/Picture4.webp',
+                'images/testimonials/Siemens/Picture5.webp',
+                'images/testimonials/Siemens/Picture6.webp',
+                'images/testimonials/Siemens/Picture7.webp',
+                'images/testimonials/Siemens/Picture8.webp',
+                'images/testimonials/Siemens/Picture9.webp',
+                'images/testimonials/Siemens/Picture10.webp',
+                'images/testimonials/Siemens/Picture11.webp'
+            ]
+        };
 
+        $('.visit-card').on('click', function () {
+            const sectionName = $(this).find('h3').text().toLowerCase().replace(/\s/g, '');
+            $('.modal-title').text($(this).find('h3').text());
+            $('.gallery-grid').empty();
 
-                // Click handler for visit-card
-                $('.visit-card').on('click', function() {
-                    // Get section name from h3 (e.g., "Indorama", "ZIV", "ELECRAMA EXHIBITION")
-                    const sectionName = $(this).find('h3').text().toLowerCase().replace(/\s/g, '');
-                    console.log(sectionName);
-                    // Update modal title
-                    $('.modal-title').text($(this).find('h3').text());
+            galleryModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
 
-                    // Clear existing images in gallery-grid
-                    $('.gallery-grid').empty();
+            $('.modal-body').append(
+                $('<div>').addClass('loader').append(
+                    $('<div>').addClass('spinner'),
+                    $('<span>').text('Loading...')
+                )
+            );
 
-
-                    // Show modal
-                    $('.gallery-modal').addClass('active');
-
-                    $('.modal-body').append(
-                        $('<div>').addClass('loader').append(
-                            $('<div>').addClass('spinner'),
-                            $('<span>').text('Loading...')
-                        )
-                    );
-
-                    // Load images for the section (skip first image, already in visit-card)
-                    if (imagePaths[sectionName]) {
-                        imagePaths[sectionName].forEach(function(src, index) {
-                            const $galleryItem = $('<div>').addClass('gallery-item');
-                            const $img = $('<img>').attr({
-                                src: src,
-                                alt: `${sectionName} Image`
-                            }).addClass('loaded');
-                            $galleryItem.append($img);
-                            $('.gallery-grid').append($galleryItem);
-                        });
-                        $('.modal-body .loader').remove();
-                    } else {
-                        $('.gallery-item').append('<p>No images available.</p>');
-                    }
-
+            if (imagePaths[sectionName]) {
+                imagePaths[sectionName].forEach(function (src, index) {
+                    const $galleryItem = $('<div>').addClass('gallery-item');
+                    const $img = $('<img>').attr({
+                        src: src,
+                        alt: `${sectionName} Image`
+                    }).addClass('loaded');
+                    $galleryItem.append($img);
+                    $('.gallery-grid').append($galleryItem);
                 });
+                $('.modal-body .loader').remove();
+            } else {
+                $('.gallery-item').append('<p>No images available.</p>');
+            }
+        });
 
-                // Close modal
-                $('.close-btn').on('click', function() {
-                    $('.gallery-modal').removeClass('active');
-                });
+        // Close gallery modal
+        galleryModal.querySelector('.close-btn').addEventListener('click', () => {
+            galleryModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
 
-                // Optional: Close modal when clicking outside content
-                $('.gallery-modal').on('click', function(e) {
-                    if ($(e.target).hasClass('gallery-modal')) {
-                        $('.gallery-modal').removeClass('active');
-                    }
-                });
+        // Close gallery modal when clicking outside
+        galleryModal.addEventListener('click', (e) => {
+            if (e.target === galleryModal) {
+                galleryModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
 
+        // Close gallery modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && galleryModal.classList.contains('active')) {
+                galleryModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
 
-
-            // Close modal when clicking outside content
-            document.querySelectorAll('.gallery-modal').forEach(modal => {
-                modal.addEventListener('click', function(e) {
-                    if (e.target === this) {
-                        closeGallery(this.id);
-                    }
-                });
+        // Hover effects for visit cards
+        document.querySelectorAll('.visit-card').forEach(card => {
+            card.addEventListener('mouseenter', function () {
+                this.style.transform = 'translateY(-8px) scale(1.02)';
             });
-
-            // Close modal with Escape key
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape') {
-                    document.querySelectorAll('.gallery-modal.active').forEach(modal => {
-                        closeGallery(modal.id);
-                    });
-                }
+            card.addEventListener('mouseleave', function () {
+                this.style.transform = 'translateY(0) scale(1)';
             });
-
-            // Add hover effects for cards
-            document.querySelectorAll('.visit-card').forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-8px) scale(1.02)';
-                });
-                
-                card.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0) scale(1)';
-                });
-            });
-
+        });
     });
+
+    // Slider and Project Modal Logic
+    (function () {
+        const wrapper = document.getElementById('sliderWrapper');
+        const track = document.getElementById('sliderTrack');
+        const projectModal = document.getElementById('projectModal'); // Renamed to avoid conflict
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDetails = document.getElementById('modalDetails');
+        const modalClose = document.getElementById('modalClose');
+        const readMoreButtons = document.querySelectorAll('.read-more-btn');
+        const originalHTML = track.innerHTML.trim();
+
+        function waitForImages(el) {
+            const imgs = Array.from(el.querySelectorAll('img'));
+            if (!imgs.length) return Promise.resolve();
+            return Promise.all(imgs.map(img => {
+                if (img.complete && img.naturalWidth !== 0) return Promise.resolve();
+                return new Promise(resolve => {
+                    img.addEventListener('load', resolve);
+                    img.addEventListener('error', resolve);
+                });
+            }));
+        }
+
+        function getOuterWidthWithMargin(node) {
+            const rect = node.getBoundingClientRect();
+            const style = window.getComputedStyle(node);
+            const mr = parseFloat(style.marginRight || 0);
+            return rect.width + mr;
+        }
+
+        let groupWidth = 0;
+        let rafId = null;
+        let lastTime = null;
+        let pos = 0;
+        let isPaused = false;
+        let wasPausedByModal = false;
+        let speed = parseFloat(wrapper.dataset.speed) || 85;
+
+        function debounce(fn, wait) {
+            let t;
+            return (...args) => {
+                clearTimeout(t);
+                t = setTimeout(() => fn.apply(this, args), wait);
+            };
+        }
+
+        async function buildSlider() {
+            cancelAnimationFrameIfNeeded();
+            track.innerHTML = originalHTML;
+            await waitForImages(track);
+            const originalSlides = Array.from(track.children);
+            if (!originalSlides.length) return;
+            groupWidth = originalSlides.reduce((sum, s) => sum + getOuterWidthWithMargin(s), 0);
+            const wrapperWidth = wrapper.clientWidth;
+            while (track.scrollWidth < Math.max(groupWidth * 2, wrapperWidth + groupWidth)) {
+                track.insertAdjacentHTML('beforeend', originalHTML);
+            }
+            pos = 0;
+            track.style.transform = `translate3d(0px, 0, 0)`;
+            lastTime = null;
+            cancelAnimationFrameIfNeeded();
+            rafId = requestAnimationFrame(animate);
+        }
+
+        function cancelAnimationFrameIfNeeded() {
+            if (rafId) {
+                cancelAnimationFrame(rafId);
+                rafId = null;
+            }
+        }
+
+        function animate(now) {
+            rafId = requestAnimationFrame(animate);
+            if (!lastTime) { lastTime = now; return; }
+            const dt = (now - lastTime) / 1000;
+            lastTime = now;
+            if (isPaused) return;
+            pos += speed * dt;
+            if (pos >= groupWidth) pos = pos % groupWidth;
+            track.style.transform = `translate3d(${-Math.round(pos)}px, 0, 0)`;
+        }
+
+        // Delegate hover events to handle cloned buttons
+        document.body.addEventListener('pointerenter', (e) => {
+            if (e.target.closest('.read-more-btn')) {
+                isPaused = true;
+            }
+        }, true);
+
+        document.body.addEventListener('pointerleave', (e) => {
+            if (e.target.closest('.read-more-btn')) {
+                if (!projectModal.classList.contains('active')) isPaused = false;
+            }
+        }, true);
+
+        // Modal open (delegated)
+        document.body.addEventListener('click', (e) => {
+            const btn = e.target.closest('.read-more-btn');
+            if (!btn) return;
+            e.preventDefault();
+
+            const card = btn.closest('.card');
+            console.log(card)
+            const projectContent = card.querySelector('.testimonial');
+            const projectTitle = card.querySelector('h5');
+
+            modalTitle.textContent = projectTitle ? projectTitle.textContent.trim() : 'Details';
+            modalDetails.innerHTML = projectContent ? projectContent.getAttribute('data-fullhtml') || projectContent.innerHTML.trim() : '';
+
+            projectModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            wasPausedByModal = true;
+            isPaused = true;
+        });
+
+        document.querySelectorAll('.testimonial').forEach(p => {
+            const fullHTML = p.innerHTML.trim();
+
+            // Convert <br> to spaces temporarily for word splitting
+            const tempText = fullHTML
+                .replace(/<br\s*\/?>/gi, ' ')      // replace <br> tags with space
+                .replace(/&nbsp;/g, ' ')           // replace non-breaking spaces
+                .replace(/\s+/g, ' ')              // normalize multiple spaces
+                .trim();
+
+            const words = tempText.split(' ');
+            const limit = 40; // adjust number of words you want to show
+
+            if (words.length > limit) {
+                const truncatedText = words.slice(0, limit).join(' ') + '...';
+                // Replace paragraph content with truncated plain text and preserve structure
+                p.innerHTML = truncatedText;
+                p.setAttribute('data-fullhtml', fullHTML); // store original HTML for modal use
+            }
+        });
+
+        function closeModal() {
+            if (!projectModal.classList.contains('active')) return;
+            projectModal.classList.remove('active');
+            document.body.style.overflow = '';
+            wasPausedByModal = false;
+            const inside = Array.from(readMoreButtons).some(btn => btn.matches(':hover'));
+            isPaused = inside;
+        }
+
+        modalClose.addEventListener('click', closeModal);
+        projectModal.addEventListener('click', (e) => { if (e.target === projectModal) closeModal(); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+        function isPointerInside(el) {
+            return Array.from(el).some(btn => btn.matches(':hover'));
+        }
+
+        const handleResize = debounce(() => {
+            buildSlider().catch(err => console.error(err));
+        }, 180);
+        window.addEventListener('resize', handleResize);
+
+        buildSlider().catch(err => console.error(err));
+
+        new MutationObserver(() => {
+            const newSpeed = parseFloat(wrapper.dataset.speed) || speed;
+            speed = newSpeed;
+        }).observe(wrapper, { attributes: true, attributeFilter: ['data-speed'] });
+    })();
 </script>
+
 </body>
 
 </html>
