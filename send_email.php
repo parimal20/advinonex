@@ -54,6 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Port = 587;
 
         // Email details
+        $mail->CharSet    = 'UTF-8'; // ✅ Fix encoding issue
         $mail->setFrom($email, $name);
         $mail->addAddress('info@advinonex.com');
         $mail->Subject = "New Contact Form Submission from $name";

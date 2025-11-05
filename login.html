@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="ADVINONEX">
+	<!-- Page Title -->
+    <title>Log In | ADVINONEX</title>
+	<!-- Favicon Icon -->
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+	<!-- Google Fonts Css-->
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+	<!-- Bootstrap Css -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<!-- SlickNav Css -->
+	<link href="css/slicknav.min.css" rel="stylesheet">
+	<!-- Swiper Css -->
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<!-- Font Awesome Icon Css-->
+	<link href="css/all.css" rel="stylesheet" media="screen">
+	<!-- Animated Css -->
+	<link href="css/animate.css" rel="stylesheet">
+    <!-- Magnific Popup Core Css File -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Mouse Cursor Css File -->
+	<link rel="stylesheet" href="css/mousecursor.css">
+	<!-- Main Custom Css -->
+	<link href="css/custom.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+  <style>
+    input, select { width: 100%; padding: 8px; margin: 6px 0; }
+    button { background: #007bff; color: #fff; padding: 10px; border: none; cursor: pointer; }
+    .msg { margin-top: 10px; color: green; }
+    .loginbtn:hover { color: #028ecf; 
+        background-color: white;
+        border: 1px solid #028ecf;
+    }
+    .loginbtn:disabled{
+        color: black;
+    }
+  </style>
+</head>
+
+<body>
+
+    <!-- Preloader Start -->
+	<div class="preloader">
+		<div class="loading-container">
+			<div class="loading"></div>
+			<div id="loading-icon">
+                <img src="images/avn.webp" alt="" style="
+                    margin: 3rem 0px 3rem;
+                    background-color: #ffffffc2;
+                    border-radius: 5px;
+                    max-height: 15rem;
+                    pointer-events: none;
+                    user-select: none;
+                    grid-column: 1;
+                    grid-row: 1;
+                    align-self: center;
+                    justify-self: center;
+                    text-align: center;
+                    color: gray;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                ">
+                </div>
+		</div>
+	</div>
+	<!-- Preloader End -->
+
+    <!-- Header Start -->
+    <div id="header"></div>   
+	<!-- Header End -->
+
+        <!-- Page Contact Us Start -->
+        <div class="page-contact-us" style="padding-bottom: 50px;">
+                <div class="login-page" style="margin-top: 50px;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-10 offset-lg-1">
+                                <div class="bg-white shadow rounded" style="border-radius: 30px !important;">
+                                    <div class="row">
+                                        <div class="col-md-5 ps-0 d-none d-md-block">
+                                            <div class="d-flex flex-column justify-content-center form-right h-100 bg-white text-white text-center pt-5" style="border-radius: 30px;">
+                                                <img src="./images/advinoprotosuite.png" alt="Advino Protosuite" class="img-fluid my-4 mb-0" style="max-width: 27em;">
+                                                <p class="" style="
+                                                    color: black;
+                                                    text-align: left;
+                                                    margin: 12px;
+                                                ">AdvinoProtoSuite is a powerful protocol test harness for validating and simulating industrial communication systems.
+                                                It supports Modbus, DNP3, IEC 60870-5-104, and IEC 61850 to ensure reliable and interoperable deployments.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="form-left h-100 py-5 px-5" style="background-color: #028ecf;color: white; border-radius: 30px;box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); transition: all 0.3s cubic-bezier(.25, .8, .25, 1);">
+                                                <h1 style="
+                                                    font-family: 'Montserrat', sans-serif;
+                                                    margin-bottom: 10px;
+                                                    text-align: center;
+                                                    color: white;
+                                                " classs="mb-1">Log In</h1>
+                                                <form id="loginForm" class="row g-4">
+                                                        <div class="col-12">
+                                                            <label>Email<span class="text-danger">*</span></label>
+                                                            <div class="input-group">
+                                                                <div class="input-group-text"><i class="bi bi-person-fill"></i></div>
+                                                                <input type="email" name="email" id="email" class="form-control" placeholder="Enter Email" required>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-12">
+                                                            <label>Password<span class="text-danger">*</span></label>
+                                                            <div class="input-group">
+                                                                <div class="input-group-text"><i class="bi bi-lock-fill"></i></div>
+                                                                <input type="password" name="password" id="password" class="form-control" placeholder="Enter Password" required>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-sm-6">
+                                                            <a href="#" class="float-left text-white">Forgot Password?</a>
+                                                        </div>
+
+                                                        <div class="col-12 mt-4">
+                                                            <button type="submit" class="btn bg-white px-4 float-end loginbtn" id="loginBtn" style="width: 100%;">Login</button>
+                                                        </div>
+
+                                                        <div class="col-sm-12 text-center">
+                                                            <a href="register.html" class="text-white">Not registered yet? <span style="color: #00ff24; text-decoration: underline;">Create an account</span></a>
+                                                        </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999">
+            <div id="toastMsg" class="toast align-items-center text-white border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                <div id="toastBody" class="toast-body"></div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+                </div>
+            </div>
+        </div>
+
+    <!-- Footer Start -->
+    <div id="footer"></div>   
+    <!-- Footer End -->
+
+    <!-- Jquery Library File -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap js file -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Validator js file -->
+    <script src="js/validator.min.js"></script>
+    <!-- SlickNav js file -->
+    <script src="js/jquery.slicknav.js"></script>
+    <!-- Swiper js file -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- Counter js file -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <!-- Magnific js file -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- SmoothScroll -->
+    <script src="js/SmoothScroll.js"></script>
+    <!-- Parallax js -->
+    <script src="js/parallaxie.js"></script>
+    <!-- MagicCursor js file -->
+    <script src="js/gsap.min.js"></script>
+    <script src="js/magiccursor.js"></script>
+    <!-- Text Effect js file -->
+    <script src="js/SplitText.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <!-- YTPlayer js File -->
+    <!-- Wow js file -->
+    <script src="js/wow.js"></script>
+    <!-- Main Custom js file -->
+    <script src="js/function.js"></script>
+
+
+    <script>
+        function showToast(message, type = 'success') {
+            const toastEl = $('#toastMsg');
+            const toastBody = $('#toastBody');
+            toastEl.removeClass('bg-success bg-danger bg-warning');
+            if (type === 'success') toastEl.addClass('bg-success');
+            else if (type === 'error') toastEl.addClass('bg-danger');
+            else toastEl.addClass('bg-warning');
+            toastBody.html(message);
+            const toast = new bootstrap.Toast(toastEl[0]);
+            toast.show();
+        }
+
+        $('#loginForm').on('submit', function(e) {
+        e.preventDefault();
+
+        const btn = $('#loginBtn'); // assuming your button id is loginBtn
+        btn.prop('disabled', true).html('<span class="spinner-border spinner-border-sm me-2"></span>Logging in...');
+
+        $.ajax({
+        url: 'login.php',
+        type: 'POST',
+        data: new FormData(this),
+        processData: false,
+        contentType: false,
+        beforeSend: function () {
+            btn.prop('disabled', true).html('<span class="spinner-border spinner-border-sm me-2"></span>Validating...');
+        },
+        success: function (response) {
+            if (response.toLowerCase().includes("success")) {
+            // Show spinner + message
+            btn.prop('disabled', true).html('<span class="spinner-border spinner-border-sm me-2"></span>Logging in...');
+            showToast("Login successful! Redirecting...", "success");
+
+            // Redirect after short delay
+            setTimeout(() => {
+                window.location = 'dashboard.php';
+            }, 1200);
+
+            } else {
+            // Show error, re-enable button
+            showToast(response, "error");
+            btn.prop('disabled', false).html('Login');
+            }
+        },
+        error: function () {
+            showToast("Something went wrong. Please try again.", "error");
+            btn.prop('disabled', false).html('Login');
+        }
+        });
+
+        });
+
+        $(document).ready(function () {
+        $('#menu').slicknav({
+            prependTo: '.responsive-menu',
+            label: '' // Optional: Set to empty string if you don't want a label
+        });
+    });
+  </script>
+</body>
+</html>

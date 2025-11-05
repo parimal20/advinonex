@@ -5506,6 +5506,12 @@ header.main-header .header-sticky.active .container-fluid::before{
 	header.main-header.header-fixed .navbar-brand img{
 		width: 6rem;
 	}
+	 .logindesktopbtn{
+		display: none;
+	 }
+	 .login-page{
+		margin-top: 0px !important;
+	 }
 }
 
 @media only screen and (max-width: 767px){
@@ -6899,4 +6905,12 @@ header.main-header.header-fixed .btn-phone {
     font-size: 14px;
     margin-right: 10px;
     padding: 0 10px;
+}
+
+.loginheaderbtn{
+	background-image: unset !important; padding: 17px 20px 17px 20px !important;
+}
+
+.loginheaderbtn.btn-default::before{
+	content: none !important;
 }

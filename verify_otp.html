@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="ADVINONEX">
+	<!-- Page Title -->
+    <title>Verify OTP | ADVINONEX</title>
+	<!-- Favicon Icon -->
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+	<!-- Google Fonts Css-->
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+	<!-- Bootstrap Css -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<!-- SlickNav Css -->
+	<link href="css/slicknav.min.css" rel="stylesheet">
+	<!-- Swiper Css -->
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<!-- Font Awesome Icon Css-->
+	<link href="css/all.css" rel="stylesheet" media="screen">
+	<!-- Animated Css -->
+	<link href="css/animate.css" rel="stylesheet">
+    <!-- Magnific Popup Core Css File -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Mouse Cursor Css File -->
+	<link rel="stylesheet" href="css/mousecursor.css">
+	<!-- Main Custom Css -->
+	<link href="css/custom.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Poppins", sans-serif; }
+    .title {
+      max-width: 400px;
+      margin: auto;
+      text-align: center;
+    }
+    .title h3 { font-weight: bold; }
+    .title p { font-size: 12px; color: #118a44; }
+    .title p.msg { color: initial; text-align: center; font-weight: bold; }
+    .otp-input-fields {
+      margin: auto;
+      max-width: 400px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 40px;
+    }
+    .otp-input-fields input {
+      height: 40px;
+      width: 40px;
+      background-color: transparent;
+      border-radius: 4px;
+      border: 1px solid #2f8f1f;
+      text-align: center;
+      outline: none;
+      font-size: 16px;
+    }
+    .otp-input-fields input::-webkit-outer-spin-button,
+    .otp-input-fields input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    .otp-input-fields input[type=number] {
+      -moz-appearance: textfield;
+    }
+    .otp-input-fields input:focus {
+      border-width: 2px;
+      border-color: #247d19;
+      font-size: 20px;
+    }
+    .result {
+      max-width: 400px;
+      margin: auto;
+      padding: 0px 24px;
+      text-align: center;
+    }
+    .result p {
+      font-size: 18px;
+      font-family: 'Poppins', sans-serif;
+      transition: color 0.5s ease;
+    }
+    .result p._ok { color: green; }
+    .result p._notok { color: red; }
+    button {
+      background: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    button:disabled {
+      background-color: #6c757d;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+
+<body>
+    <!-- Preloader Start -->
+	<div class="preloader">
+		<div class="loading-container">
+			<div class="loading"></div>
+			<div id="loading-icon">
+                <img src="images/avn.webp" alt="" style="
+                    margin: 3rem 0px 3rem;
+                    background-color: #ffffffc2;
+                    border-radius: 5px;
+                    max-height: 15rem;
+                    pointer-events: none;
+                    user-select: none;
+                    grid-column: 1;
+                    grid-row: 1;
+                    align-self: center;
+                    justify-self: center;
+                    text-align: center;
+                    color: gray;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                ">
+                </div>
+		</div>
+	</div>
+	<!-- Preloader End -->
+
+    <!-- Header Start -->
+    <div id="header"></div>   
+	<!-- Header End -->
+
+        <div class="page-contact-us" style="padding-bottom: 50px;">
+                <div class="login-page" style="margin-top: 50px;">
+
+          <div class="container" style="margin-top:60px; margin-bottom:60px;">
+            <div class="row justify-content-center">
+              <div class="col-lg-4 col-md-6 col-sm-10">
+                <div class="p-4 bg-white rounded shadow-sm">
+                  <form id="otpForm" class="otp-form" action="javascript:void(0)">
+                    <input type="hidden" name="email" id="email" value="shasj@Jhas.ciom">
+
+                    <div class="title mb-3">
+                      <h3>OTP VERIFICATION</h3>
+                      <p class="info">An OTP has been sent to your registered email</p>
+                      <p class="msg">Please enter OTP to verify</p>
+                    </div>
+
+                    <div class="otp-input-fields">
+                      <input type="number" maxlength="1" class="otp__digit otp__field__1">
+                      <input type="number" maxlength="1" class="otp__digit otp__field__2">
+                      <input type="number" maxlength="1" class="otp__digit otp__field__3">
+                      <input type="number" maxlength="1" class="otp__digit otp__field__4">
+                      <input type="number" maxlength="1" class="otp__digit otp__field__5">
+                      <input type="number" maxlength="1" class="otp__digit otp__field__6">
+                    </div>
+
+                    <div class="result text-center">
+                      <input type="hidden" id="otp_value">
+                      <button type="submit" id="verifyBtn" class="btn btn-primary mt-3 w-100">Verify OTP</button>
+                      <div class="msg mt-2" id="msg"></div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+        </div>
+
+  <!-- Toast Container -->
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999">
+    <div id="toastMsg" class="toast align-items-center text-white border-0" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div id="toastBody" class="toast-body"></div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+      </div>
+    </div>
+  </div>
+
+
+    <!-- Footer Start -->
+    <div id="footer"></div>   
+    <!-- Footer End -->
+
+    <!-- Jquery Library File -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap js file -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Validator js file -->
+    <script src="js/validator.min.js"></script>
+    <!-- SlickNav js file -->
+    <script src="js/jquery.slicknav.js"></script>
+    <!-- Swiper js file -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- Counter js file -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <!-- Magnific js file -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- SmoothScroll -->
+    <script src="js/SmoothScroll.js"></script>
+    <!-- Parallax js -->
+    <script src="js/parallaxie.js"></script>
+    <!-- MagicCursor js file -->
+    <script src="js/gsap.min.js"></script>
+    <script src="js/magiccursor.js"></script>
+    <!-- Text Effect js file -->
+    <script src="js/SplitText.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <!-- YTPlayer js File -->
+    <!-- Wow js file -->
+    <script src="js/wow.js"></script>
+    <!-- Main Custom js file -->
+    <script src="js/function.js"></script>
+
+  <script>
+    // Prefill email from localStorage or URL param
+    const emailParam = localStorage.getItem("verify_email") || new URLSearchParams(window.location.search).get('email');
+    if (emailParam) {
+      document.getElementById('email').value = emailParam;
+    } else {
+      alert("No email found! Please register again.");
+      window.location.href = "register.html";
+    }
+
+        // Toast utility
+    function showToast(message, type = 'success') {
+      const toastEl = $('#toastMsg');
+      const toastBody = $('#toastBody');
+      toastEl.removeClass('bg-success bg-danger bg-warning');
+      if (type === 'success') toastEl.addClass('bg-success');
+      else if (type === 'error') toastEl.addClass('bg-danger');
+      else toastEl.addClass('bg-warning');
+      toastBody.html(message);
+      const toast = new bootstrap.Toast(toastEl[0]);
+      toast.show();
+    }
+
+// OTP Input Logic (fixed)
+const otpInputs = document.querySelectorAll(".otp__digit");
+otpInputs.forEach((input, index) => {
+  input.addEventListener("input", (e) => {
+    const value = e.target.value.replace(/\D/g, "").slice(0, 1); // keep only the first digit
+    e.target.value = value;
+
+    // move focus automatically
+    if (value && index < otpInputs.length - 1) {
+      otpInputs[index + 1].focus();
+    }
+
+    // build full OTP (no visible text now)
+    let otpCode = "";
+    otpInputs.forEach(inp => otpCode += inp.value);
+    // store it invisibly for submit
+    document.getElementById('otp_value').value = otpCode;
+  });
+
+  // handle backspace navigation
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Backspace" && !e.target.value && index > 0) {
+      otpInputs[index - 1].focus();
+    }
+  });
+});
+
+
+
+    // Submit OTP
+    $('#otpForm').on('submit', function (e) {
+      e.preventDefault();
+
+      console.log($('#_otp').text());
+      const otp = $('#otp_value').val().trim();
+      const email = $('#email').val();
+
+      if (otp.length !== 6) {
+        showToast("Please enter a valid 6-digit OTP.", "error");
+        return;
+      }
+
+      const btn = $('#verifyBtn');
+      btn.prop('disabled', true).text('Verifying...');
+
+      $.ajax({
+        url: 'verify_otp.php',
+        type: 'POST',
+        data: { otp: otp, email: email },
+        success: function (response) {
+          if (response.toLowerCase().includes("verified")) {
+            showToast("Your account has been verified successfully! You can now log in.", "success");
+            localStorage.removeItem("verify_email");
+            setTimeout(() => window.location = 'login.html', 2000);
+          } else {
+            showToast(response, "error");
+          }
+        },
+        error: function () {
+          showToast("Something went wrong. Please try again.", "error");
+        },
+        complete: function () {
+          btn.prop('disabled', false).text('Verify OTP');
+        }
+      });
+    });
+
+            $(document).ready(function () {
+        $('#menu').slicknav({
+            prependTo: '.responsive-menu',
+            label: '' // Optional: Set to empty string if you don't want a label
+        });
+    });
+  </script>
+</body>
+</html>
