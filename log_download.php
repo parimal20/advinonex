@@ -9,7 +9,7 @@ if (!isset($_SESSION['user_id'])) {
 
 $user_id    = $_SESSION['user_id'];
 $user_agent = $_SERVER['HTTP_USER_AGENT'];
-$file_name  = "AdvinoProtoSuite_Setup.exe";
+$file_name  = "AdvinoProtoSuite_Setup_v1.0.0.zip";
 $download_time = date('Y-m-d H:i:s');
 $ip_address = $_SERVER['REMOTE_ADDR'];
 
